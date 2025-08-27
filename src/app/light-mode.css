@@ -1,0 +1,30 @@
+/* LIGHT MODE CSS - Only affects light mode */
+
+/* Light mode specific styles */
+html.light, body.light {
+  background-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Light mode homepage */
+.light-mode-homepage {
+  background-color: #ffffff !important;
+  color: #171717 !important;
+}
+
+/* Light mode buttons */
+.light-mode-homepage button {
+  background-color: transparent !important;
+  color: #171717 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.light-mode-homepage button:hover {
+  background-color: #f3f4f6 !important;
+}
+
+/* Light mode active button */
+.light-mode-homepage button.active {
+  background-color: #f3f4f6 !important;
+  color: #171717 !important;
+}
