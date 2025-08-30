@@ -1,0 +1,20 @@
+﻿# Setup Information for Jadiinworks Company Profile
+Last Setup: 2025-08-30 17:35:01
+Node Version: v22.2.0
+NPM Version: 10.7.0
+Dependencies Status: Complete
+Configuration Status: Valid
+
+Project Details:
+- Next.js: 15.5.1
+- React: 18.3.1
+- Tailwind CSS: 4.1.12
+- ESLint: 9.0.0
+- TypeScript: Enabled
+
+Key Libraries:
+- Framer Motion: 12.23.12
+- Lottie React: 2.4.1
+- Embla Carousel: 8.6.0
+- Lucide React: 0.542.0
+- Phosphor Icons: 2.1.10

@@ -3,23 +3,44 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "preinstall": "npm cache clean --force",
+    "clean": "rm -rf node_modules package-lock.json .next && npm cache clean --force",
+    "setup": "npm install",
+    "smart-setup": "powershell -ExecutionPolicy Bypass -File smart-setup.ps1",
+    "smart-setup-clean": "powershell -ExecutionPolicy Bypass -File smart-setup.ps1 -Clean",
+    "smart-setup-force": "powershell -ExecutionPolicy Bypass -File smart-setup.ps1 -Force",
+    "check-deps": "powershell -ExecutionPolicy Bypass -File check-deps.ps1",
+    "check-deps-bat": "check-deps.bat",
+    "dev": "npm run smart-setup && next dev",
+    "dev-fast": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "update-deps": "node update-deps.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "@tabler/icons-react": "^3.34.1",
+    "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.23.12",
     "lottie-react": "^2.4.1",
-    "next": "^15.5.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "lucide-react": "^0.542.0",
+    "motion": "^12.23.12",
+    "next": "15.5.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@types/node": "24.3.0",
+    "@types/react": "^18.3.12",
     "eslint": "^9.0.0",
-    "eslint-config-next": "^15.5.0",
+    "eslint-config-next": "15.5.1",
     "tailwindcss": "^4.1.12",
-    "@tailwindcss/postcss": "^4.1.12"
+    "typescript": "5.9.2"
   }
 }

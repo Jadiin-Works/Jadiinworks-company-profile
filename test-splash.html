@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Splash Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #B019FF;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px 5px;
+            font-size: 16px;
+        }
+        .test-button:hover {
+            background: #8000C4;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Test Splash Screen</h1>
+        
+        <div class="info">
+            <strong>Fitur yang sudah diimplementasi:</strong>
+            <ul>
+                <li>✅ Splash screen muncul setiap refresh halaman</li>
+                <li>✅ Logo menyesuaikan tema (light/dark)</li>
+                <li>✅ Loading screen diganti dengan splash screen</li>
+                <li>✅ Animasi smooth dengan framer-motion</li>
+                <li>✅ Tema otomatis berdasarkan waktu WIB</li>
+            </ul>
+        </div>
+
+        <h3>Test Instructions:</h3>
+        <ol>
+            <li>Refresh halaman ini untuk melihat splash screen</li>
+            <li>Ubah tema di navbar (light/dark/system)</li>
+            <li>Refresh lagi untuk melihat logo yang berbeda</li>
+            <li>Perhatikan animasi dan transisi yang smooth</li>
+        </ol>
+
+        <div style="margin-top: 30px;">
+            <button class="test-button" onclick="location.reload()">🔄 Refresh Page</button>
+            <button class="test-button" onclick="window.open('/', '_blank')">🏠 Open Main App</button>
+        </div>
+
+        <div class="info" style="margin-top: 30px;">
+            <strong>Catatan:</strong>
+            <p>Splash screen akan muncul setiap kali halaman di-refresh, tidak hanya sekali per session. Logo akan otomatis menyesuaikan dengan tema yang aktif.</p>
+        </div>
+    </div>
+</body>
+</html>
