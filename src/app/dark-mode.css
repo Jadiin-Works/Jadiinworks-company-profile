@@ -21,7 +21,7 @@ html.dark, body.dark {
 
 .dark-mode-homepage button:hover {
   background-color: #111827 !important;
-}
+}              
 
 /* Dark mode active button */
 .dark-mode-homepage button.active {

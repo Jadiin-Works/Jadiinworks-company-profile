@@ -1,114 +1,145 @@
 "use client";
 
+import React, { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import ServiceCard from "./components/services/ServiceCard";
+import CometCard from "./components/CometCard";
+import ClientLayout from "./components/ClientLayout";
+import Nav from "./components/Nav";
 import { useTheme } from "./components/ThemeProvider";
-import { useEffect, useMemo, useState } from "react";
+import { ServiceThemeProvider } from "./components/services/ServiceThemeProvider";
+import { PaintBrushBroad, Code, ShieldCheck } from "@phosphor-icons/react";
 
-export default function RootPage() {
-	const { theme, setTheme } = useTheme();
-	const isDark = (theme === "dark") || (theme === "system" && typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-	const [scrolled, setScrolled] = useState(false);
-	const [menuOpen, setMenuOpen] = useState(false);
-	const [active, setActive] = useState("home");
-	const sections = useMemo(() => (["home","services","portfolios","about","contact"]), []);
-
-	useEffect(() => {
-		const onScroll = () => {
-			setScrolled(window.scrollY > 8);
-			let current = "home";
-			for (const id of sections) {
-				const el = document.getElementById(id);
-				if (!el) continue;
-				const rect = el.getBoundingClientRect();
-				if (rect.top <= 120 && rect.bottom >= 120) { current = id; break; }
+function HomePageContent() {
+	// Safely get theme with fallback
+	let theme = "system";
+	let setTheme = () => {};
+	
+	try {
+		const themeContext = useTheme();
+		theme = themeContext.theme;
+		setTheme = themeContext.setTheme;
+	} catch (error) {
+		console.error("Error getting theme context:", error);
+		// Fallback theme detection
+		if (typeof window !== 'undefined') {
+			try {
+				const stored = localStorage.getItem("jw_theme");
+				if (stored === "light" || stored === "dark") {
+					theme = stored;
+				}
+			} catch (e) {
+				// localStorage might not be available
 			}
-			setActive(current);
-		};
-		onScroll();
-		window.addEventListener('scroll', onScroll, { passive: true });
-		return () => window.removeEventListener('scroll', onScroll);
-	}, [sections]);
-
-	useEffect(() => {
-		const body = document.body;
-		if (menuOpen) body.classList.add('no-scroll');
-		else body.classList.remove('no-scroll');
-		return () => body.classList.remove('no-scroll');
-	}, [menuOpen]);
-
-	const handleToggle = () => {
-		if (theme === "system") {
-			setTheme(isDark ? "light" : "dark");
-			return;
 		}
-		setTheme(theme === "dark" ? "light" : "dark");
-	};
+	}
 
-	const closeMenu = () => setMenuOpen(false);
+	const [isDark, setIsDark] = useState(false);
+	const [mounted, setMounted] = useState(false);
 
-	const linkClass = (id) => `jw-link${active===id? ' text-blueGreen' : ''}`;
+	// Set mounted to true after component mounts
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	// Calculate isDark in useEffect to avoid hydration mismatch
+	useEffect(() => {
+		if (!mounted) return;
+		
+		const calculateIsDark = () => {
+			if (theme === "dark") return true;
+			if (theme === "system" && typeof window !== 'undefined' && window.matchMedia) {
+				return window.matchMedia('(prefers-color-scheme: dark)').matches;
+			}
+			return false;
+		};
+		
+		setIsDark(calculateIsDark());
+		
+		// Listen for system theme changes
+		if (theme === "system" && typeof window !== 'undefined' && window.matchMedia) {
+			const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+			const handleChange = () => setIsDark(calculateIsDark());
+			mediaQuery.addEventListener('change', handleChange);
+			return () => mediaQuery.removeEventListener('change', handleChange);
+		}
+	}, [theme, mounted]);
 
 	return (
 		<main className={`w-full min-h-screen pt-20 ${isDark ? '' : ''}`} style={{ backgroundColor: isDark ? "#1A1A1A" : "#ffffff", color: isDark ? "#ffffff" : "#171717" }}>
-			{/* Navbar */}
-			<nav className={`jw-nav ${scrolled ? 'scrolled' : ''}`}>
-				<div className="jw-nav-inner">
-					<div className="jw-brand">Jadiinworks</div>
-					<div className="jw-links">
-						<a href="#home" className={linkClass('home')}>Home</a>
-						<a href="#services" className={linkClass('services')}>Services</a>
-						<a href="#portfolios" className={linkClass('portfolios')}>Portfolios</a>
-						<a href="#about" className={linkClass('about')}>About Us</a>
-						<a href="#contact" className={linkClass('contact')}>Contact Us</a>
-					</div>
-					<div className="jw-cta">
-						<button onClick={handleToggle} aria-label="Toggle theme" className="p-2 rounded-full border border-white/20 hover:bg-white/10 transition" title="Toggle theme">
-							{(theme === 'dark' || (theme === 'system' && isDark)) ? (
-								<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" strokeWidth="1.6" fill="currentColor" />
-								</svg>
-							) : (
-								<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.6" />
-									<path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.64 5.64 4.22 4.22M19.78 19.78 18.36 18.36M18.36 5.64 19.78 4.22M4.22 19.78 5.64 18.36" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-								</svg>
-							)}
-						</button>
-						<button className={`jw-burger ${menuOpen ? 'open' : ''}`} aria-label="Open menu" onClick={() => setMenuOpen(!menuOpen)}>
-							<span className="burger-lines"><span /></span>
-						</button>
-					</div>
-				</div>
-			</nav>
-
-			{/* Mobile drawer */}
-			<div className={`jw-drawer ${menuOpen ? 'open' : ''}`} onClick={closeMenu}>
-				<div className="jw-drawer-panel" onClick={(e) => e.stopPropagation()}>
-					<div className="jw-drawer-head">
-						<div className="jw-drawer-title">Menu</div>
-						<button aria-label="Close menu" className={`jw-burger ${menuOpen ? 'open' : ''}`} onClick={closeMenu}>
-							<span className="burger-lines"><span /></span>
-						</button>
-					</div>
-					<div className="jw-drawer-links">
-						<a href="#home" className="jw-link" onClick={closeMenu}>Home</a>
-						<a href="#services" className="jw-link" onClick={closeMenu}>Services</a>
-						<a href="#portfolios" className="jw-link" onClick={closeMenu}>Portfolios</a>
-						<a href="#about" className="jw-link" onClick={closeMenu}>About Us</a>
-						<a href="#contact" className="jw-link" onClick={closeMenu}>Contact Us</a>
-					</div>
-				</div>
-			</div>
+		{mounted ? (
+			<>
+			<Nav />
 
 			{/* Sections anchors for smooth navigation */}
 			<section id="home" className="mx-auto max-w-4xl px-6 py-24">
 				<h1 className="text-3xl font-extrabold tracking-tight">Welcome to Jadiinworks</h1>
 				<p className="mt-2 opacity-80">Company profile website with modern theme switching.</p>
 			</section>
-			<section id="services" className="mx-auto max-w-4xl px-6 py-24 opacity-80">Services section</section>
+			<section id="services" className="relative mx-auto w-full max-w-6xl px-6 py-24">
+				<div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
+					<div className="absolute -top-24 -right-16 h-56 w-56 rounded-full blur-3xl bg-gradient-to-br from-blue-500/10 via-teal-400/10 to-fuchsia-500/10" />
+				</div>
+				<div
+					className="mb-8"
+					style={{
+						transition: 'all 0.6s ease'
+					}}
+				>
+					<h2 className="text-2xl md:text-3xl font-bold tracking-tight">Sekilas Layanan Kami</h2>
+					<p className="mt-2 opacity-80 max-w-2xl">Cuplikan ringkas dari layanan inti kami. Jelajahi detail lengkap dan proses kerja kami melalui halaman layanan.</p>
+				</div>
+
+				<div
+					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+					style={{
+						transition: 'all 0.6s ease'
+					}}
+				>
+					{[
+						{ Icon: PaintBrushBroad, emoji: "🎨", title: "Desain Website & UI/UX", points: ["Desain modern", "Mobile-first", "Alur intuitif", "Wireframe & prototype"] },
+						{ Icon: Code, emoji: "💻🚀", title: "Pengembangan Website", points: ["Coding dari nol", "CMS siap pakai", "Optimasi performa", "Fitur kustom"] },
+						{ Icon: ShieldCheck, emoji: "🔧🛡️", title: "Dukungan & Pemeliharaan", points: ["Update keamanan", "Backup berkala", "Support responsif", "Edukasi pengelolaan"] },
+					].map((svc, i) => (
+						<div key={i} style={{ transition: 'all 0.6s ease' }}>
+							<CometCard>
+								<ServiceCard {...svc} index={i} />
+							</CometCard>
+						</div>
+					))}
+				</div>
+
+				<div
+					className="mt-8 flex items-center justify-end"
+					style={{
+						transition: 'all 0.6s ease'
+					}}
+				>
+					<CometCard className="inline-block">
+						<Link href="/services" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300/60 dark:border-white/20 bg-transparent backdrop-blur hover:bg-black/5 dark:hover:bg-white/10 transition">
+							<span>Lihat detail layanan</span>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+							</svg>
+						</Link>
+					</CometCard>
+				</div>
+			</section>
 			<section id="portfolios" className="mx-auto max-w-4xl px-6 py-24 opacity-80">Portfolios section</section>
 			<section id="about" className="mx-auto max-w-4xl px-6 py-24 opacity-80">About us section</section>
 			<section id="contact" className="mx-auto max-w-4xl px-6 py-24 opacity-80">Contact us section</section>
-		</main>
+			</>
+		) : null}
+	</main>
+	);
+}
+
+export default function RootPage() {
+	return (
+		<ClientLayout>
+			<ServiceThemeProvider>
+				<HomePageContent />
+			</ServiceThemeProvider>
+		</ClientLayout>
 	);
 }

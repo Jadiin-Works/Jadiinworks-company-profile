@@ -1,0 +1,1612 @@
+/* Services Page Specific Styles */
+/* This file contains styles specifically for the services page components */
+
+/* Service Page Container */
+.services-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: var(--transition-normal);
+    /* Prevent content from going under fixed floating navbar */
+    padding-top: 140px;
+    /* Page palette variables */
+    --palette-purple: #B019FF;
+    --palette-violet: #8000C4;
+    --palette-bluegreen: #00C4CC;
+    --palette-black: #1A1A1A;
+    --palette-white: #F5F5F7;
+}
+
+/* Enhanced Floating Dock Styles for Services Page */
+.services-page .fixed {
+    position: fixed !important;
+    top: 2rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1000 !important;
+}
+
+/* Light mode floating dock enhancements */
+html.light .services-page .fixed > div {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(255, 255, 255, 0.90) 50%, 
+        rgba(255, 255, 255, 0.95) 100%) !important;
+    border: 1px solid rgba(176, 25, 255, 0.15) !important;
+    box-shadow: 
+        0 20px 40px -10px rgba(176, 25, 255, 0.1),
+        0 10px 20px -5px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+html.light .services-page .fixed > div:hover {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%, 
+        rgba(255, 255, 255, 0.95) 50%, 
+        rgba(255, 255, 255, 0.98) 100%) !important;
+    border-color: rgba(176, 25, 255, 0.25) !important;
+    box-shadow: 
+        0 25px 50px -10px rgba(176, 25, 255, 0.15),
+        0 15px 30px -5px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Dark mode floating dock enhancements */
+html.dark .services-page .fixed > div {
+    background: linear-gradient(135deg, 
+        rgba(38, 38, 38, 0.95) 0%, 
+        rgba(26, 26, 26, 0.90) 50%, 
+        rgba(38, 38, 38, 0.95) 100%) !important;
+    border: 1px solid rgba(176, 25, 255, 0.2) !important;
+    box-shadow: 
+        0 20px 40px -10px rgba(176, 25, 255, 0.2),
+        0 10px 20px -5px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+html.dark .services-page .fixed > div:hover {
+    background: linear-gradient(135deg, 
+        rgba(38, 38, 38, 0.98) 0%, 
+        rgba(26, 26, 26, 0.95) 50%, 
+        rgba(38, 38, 38, 0.98) 100%) !important;
+    border-color: rgba(176, 25, 255, 0.35) !important;
+    box-shadow: 
+        0 25px 50px -10px rgba(176, 25, 255, 0.25),
+        0 15px 30px -5px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Enhanced navigation items for services page */
+.services-page .fixed a > div {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Active state enhancements */
+.services-page .fixed a > div[class*="bg-gradient-to-br from-blue"] {
+    box-shadow: 
+        0 8px 16px -4px rgba(59, 130, 246, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Hover state enhancements */
+.services-page .fixed a > div:hover {
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 
+        0 12px 24px -6px rgba(176, 25, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Logo enhancements */
+.services-page .fixed .text-xl {
+    background: linear-gradient(135deg, #B019FF, #00C4CC) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0 2px 4px rgba(176, 25, 255, 0.2) !important;
+}
+
+/* Mobile floating dock enhancements */
+@media (max-width: 768px) {
+    .services-page .fixed {
+        top: 1rem !important;
+        left: 1rem !important;
+        right: 1rem !important;
+        transform: none !important;
+    }
+    
+    .services-page .fixed > div {
+        border-radius: 1rem !important;
+        padding: 0.75rem !important;
+    }
+    
+    .services-page .fixed .mb-4 {
+        margin-bottom: 0.75rem !important;
+    }
+}
+
+/* Floating dock animations */
+@keyframes floatDock {
+    0%, 100% { 
+        transform: translateX(-50%) translateY(0px); 
+    }
+    50% { 
+        transform: translateX(-50%) translateY(-2px); 
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% { 
+        box-shadow: 
+            0 20px 40px -10px rgba(176, 25, 255, 0.1),
+            0 10px 20px -5px rgba(0, 0, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2); 
+    }
+    50% { 
+        box-shadow: 
+            0 25px 50px -10px rgba(176, 25, 255, 0.15),
+            0 15px 30px -5px rgba(0, 0, 0, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3); 
+    }
+}
+
+@keyframes glowPulseDark {
+    0%, 100% { 
+        box-shadow: 
+            0 20px 40px -10px rgba(176, 25, 255, 0.2),
+            0 10px 20px -5px rgba(0, 0, 0, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1); 
+    }
+    50% { 
+        box-shadow: 
+            0 25px 50px -10px rgba(176, 25, 255, 0.25),
+            0 15px 30px -5px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15); 
+    }
+}
+
+/* Apply animations to floating dock */
+.services-page .fixed > div {
+    animation: floatDock 6s ease-in-out infinite;
+}
+
+html.light .services-page .fixed > div {
+    animation: floatDock 6s ease-in-out infinite, glowPulse 4s ease-in-out infinite;
+}
+
+html.dark .services-page .fixed > div {
+    animation: floatDock 6s ease-in-out infinite, glowPulseDark 4s ease-in-out infinite;
+}
+
+/* Smooth transitions for theme changes */
+.services-page .fixed > div,
+.services-page .fixed a > div {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Enhanced hover effects with better timing */
+.services-page .fixed a > div:hover {
+    transform: translateY(-3px) scale(1.08) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Active state with enhanced glow */
+.services-page .fixed a > div[class*="bg-gradient-to-br from-blue"] {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+html.dark .services-page .fixed a > div[class*="bg-gradient-to-br from-blue"] {
+    animation: glowPulseDark 2s ease-in-out infinite;
+}
+
+/* Responsive adjustments for floating dock */
+@media (max-width: 1024px) {
+    .services-page .fixed > div {
+        animation: floatDock 6s ease-in-out infinite;
+    }
+    
+    html.light .services-page .fixed > div {
+        animation: floatDock 6s ease-in-out infinite, glowPulse 4s ease-in-out infinite;
+    }
+    
+    html.dark .services-page .fixed > div {
+        animation: floatDock 6s ease-in-out infinite, glowPulseDark 4s ease-in-out infinite;
+    }
+}
+
+/* Mobile specific floating dock adjustments */
+@media (max-width: 768px) {
+    .services-page .fixed > div {
+        animation: none !important;
+    }
+    
+    .services-page .fixed a > div {
+        animation: none !important;
+    }
+    
+    /* Reduce motion for mobile performance */
+    .services-page .fixed a > div:hover {
+        transform: translateY(-1px) scale(1.02) !important;
+        transition: all 0.2s ease-out !important;
+    }
+    
+    /* Mobile floating dock positioning */
+    .services-page .fixed {
+        position: fixed !important;
+        top: 1rem !important;
+        left: 1rem !important;
+        right: 1rem !important;
+        transform: none !important;
+        z-index: 1000 !important;
+    }
+    
+    /* Mobile floating dock styling */
+    .services-page .fixed > div {
+        border-radius: 1rem !important;
+        padding: 0.75rem !important;
+        margin: 0 !important;
+    }
+    
+    /* Mobile navigation items */
+    .services-page .fixed .absolute {
+        border-radius: 0.75rem !important;
+        padding: 0.5rem !important;
+    }
+    
+    .services-page .fixed .absolute > div {
+        border-radius: 0.5rem !important;
+        padding: 0.5rem !important;
+    }
+}
+
+/* High contrast mode support for floating dock */
+@media (prefers-contrast: high) {
+    .services-page .fixed > div {
+        border-width: 2px !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .services-page .fixed a > div {
+        border-width: 2px !important;
+    }
+}
+
+/* Reduced motion support for floating dock */
+@media (prefers-reduced-motion: reduce) {
+    .services-page .fixed > div,
+    .services-page .fixed a > div {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .services-page .fixed a > div:hover {
+        transform: none !important;
+    }
+}
+
+/* Ensure navbar overlay works properly on services page */
+.services-page .jw-drawer {
+    position: fixed !important;
+    inset: 0 0 0 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important;
+    background: radial-gradient(60% 50% at 50% 0%, rgba(176,25,255,0.18), transparent 60%), rgba(0,0,0,0.55) !important;
+}
+
+.services-page .jw-drawer.open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.services-page .jw-drawer-panel {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: min(80vw, 320px) !important;
+    height: 100% !important;
+    background: linear-gradient(180deg, rgba(18,18,18,0.96), rgba(26,26,26,0.9)) !important;
+    border-left: 1px solid rgba(255,255,255,0.12) !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.32s cubic-bezier(0.2,0.7,0.2,1) !important;
+    padding: calc(16px + env(safe-area-inset-top)) 14px 16px 14px !important;
+}
+
+.services-page .jw-drawer.open .jw-drawer-panel {
+    transform: translateX(0) !important;
+}
+
+/* Light mode support for services page navbar overlay */
+html.light .services-page .jw-drawer {
+    background: radial-gradient(60% 50% at 50% 0%, rgba(176,25,255,0.15), transparent 60%), rgba(0,0,0,0.30) !important;
+}
+
+html.light .services-page .jw-drawer-panel {
+    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.90)) !important;
+    border-left-color: rgba(0,0,0,0.08) !important;
+    color: #171717 !important;
+}
+
+html.light .services-page .jw-drawer .jw-link {
+    color: #171717 !important;
+}
+
+html.light .services-page .jw-drawer .jw-link:hover {
+    background: rgba(0,0,0,0.06) !important;
+}
+
+html.light .services-page .jw-drawer .jw-brand {
+    color: #171717 !important;
+}
+
+/* Service Page Background Effects */
+.services-background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -10;
+    opacity: 0.7;
+}
+
+.services-bg-gradient-1 {
+    position: absolute;
+    top: -6rem;
+    left: -6rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: radial-gradient(40% 40% at 30% 30%, color-mix(in oklab, var(--palette-purple) 22%, transparent) 0%, transparent 100%),
+                radial-gradient(50% 50% at 70% 70%, color-mix(in oklab, var(--palette-violet) 18%, transparent) 0%, transparent 100%),
+                radial-gradient(60% 60% at 50% 50%, color-mix(in oklab, var(--palette-bluegreen) 16%, transparent) 0%, transparent 100%);
+    filter: blur(3rem);
+    animation: float 20s ease-in-out infinite;
+}
+
+.services-bg-gradient-2 {
+    position: absolute;
+    bottom: -6rem;
+    right: -6rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: radial-gradient(40% 40% at 70% 30%, color-mix(in oklab, var(--palette-bluegreen) 20%, transparent) 0%, transparent 100%),
+                radial-gradient(50% 50% at 30% 70%, color-mix(in oklab, var(--palette-purple) 16%, transparent) 0%, transparent 100%),
+                radial-gradient(60% 60% at 50% 50%, color-mix(in oklab, var(--palette-violet) 14%, transparent) 0%, transparent 100%);
+    filter: blur(3rem);
+    animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(120deg); }
+    66% { transform: translateY(10px) rotate(240deg); }
+}
+
+/* Service Page Content */
+.services-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .services-container {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-container {
+        padding: 4rem 2.5rem;
+    }
+}
+
+/* Service Page Header */
+.services-header {
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .services-header {
+        margin-bottom: 4rem;
+    }
+}
+
+.services-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .services-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-title {
+        font-size: 3.75rem;
+    }
+}
+
+.services-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 48rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .services-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+/* Service Cards Section */
+.services-cards-section {
+    margin-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+    .services-cards-section {
+        margin-bottom: 8rem;
+    }
+}
+
+.services-cards-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.services-cards-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+    .services-cards-title {
+        font-size: 2.25rem;
+    }
+}
+
+.services-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+@media (min-width: 768px) {
+    .services-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.25rem;
+        align-items: stretch;
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        align-items: stretch;
+    }
+}
+
+/* Ensure grid children stretch and cards fill available height */
+.services-cards-grid > * { 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+.services-cards-grid > * > * { 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+.services-cards-grid > * .service-card { 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 260px;
+}
+
+/* Ensure all service cards have consistent styling */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid var(--border-primary);
+    background: var(--bg-card);
+    backdrop-filter: blur(8px);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    height: 100%;
+    width: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: var(--border-accent);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-medium);
+}
+
+.service-card:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Ensure CometCard wrapper doesn't interfere with card styling */
+.services-cards-grid .perspective-distant {
+    height: 100%;
+    width: 100%;
+}
+
+.services-cards-grid .perspective-distant > div {
+    height: 100%;
+    width: 100%;
+}
+
+/* Ensure consistent card content layout */
+.service-card-content {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: start;
+    gap: 1rem;
+    flex: 1;
+}
+
+.service-card-icon {
+    flex-shrink: 0;
+    font-size: 2rem;
+    user-select: none;
+    transition: var(--transition-normal);
+}
+
+.service-card:hover .service-card-icon {
+    transform: rotate(-8deg) scale(1.1);
+}
+
+.service-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.service-card-desc {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.service-card-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.service-card-list li {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.service-checklist { list-style: none; padding-left: 0; }
+.service-checklist li::before {
+    content: "✔";
+    margin-right: 8px;
+    color: var(--accent-primary, #B019FF);
+}
+
+.service-card-list li:last-child { margin-bottom: 0; }
+
+.service-card-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--border-secondary) 50%, 
+        transparent 100%);
+    margin-top: 1rem;
+}
+
+/* Process Steps Section */
+.process-steps-section {
+    margin-top: 10rem;
+}
+
+@media (min-width: 1024px) {
+    .process-steps-section {
+        margin-top: 12rem;
+    }
+}
+
+.process-steps-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .process-steps-title {
+        font-size: 2.25rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(260px, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .process-steps-grid {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+        gap: 1.75rem;
+        justify-items: center;
+    }
+}
+
+/* Embla Carousel (Steps) */
+.steps-carousel { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    position: relative;
+    padding: 0 1.5rem; /* Adjusted container padding for better balance */
+    margin-top: 2rem;
+}
+
+.embla { 
+    overflow: hidden; 
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 0;
+}
+
+/* Navigation Controls */
+.embla__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
+    position: relative;
+}
+
+.embla__progress-bottom {
+    width: 200px;
+    height: 4px;
+    background: rgba(0, 196, 204, 0.3);
+    border-radius: 9999px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    border: none;
+    box-shadow: none;
+}
+
+.embla__buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.embla__button {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.15), 
+        rgba(128, 0, 196, 0.15),
+        rgba(0, 196, 204, 0.1)
+    );
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-primary);
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 4px 16px rgba(176, 25, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.embla__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.3), 
+        rgba(128, 0, 196, 0.3),
+        rgba(0, 196, 204, 0.2)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.embla__button:hover::before {
+    opacity: 1;
+}
+
+.embla__button svg {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.embla__button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(128, 128, 128, 0.2);
+}
+
+.embla__button:disabled::before {
+    display: none;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .embla__container { 
+        gap: 1.5rem; 
+        padding: 1.5rem;
+        padding-left: 2.5rem; /* Left padding for mobile */
+        padding-right: 3rem; /* Adjusted right padding for mobile */
+    }
+    
+    .embla__controls {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    
+    .embla__buttons {
+        justify-content: center;
+    }
+    
+    .embla__progress-bottom {
+        width: 150px;
+        height: 3px;
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    /* Adjust right margin for mobile */
+    .embla__slide:last-child {
+        margin-right: 2.5rem; /* Increased right margin for mobile */
+    }
+}
+
+@media (max-width: 640px) {
+    .steps-carousel {
+        padding: 0 1rem;
+    }
+    
+    .embla__container { 
+        gap: 1rem; 
+        padding: 1rem;
+        padding-left: 2rem; /* Left padding for small screens */
+        padding-right: 2.5rem; /* Adjusted right padding for small screens */
+    }
+    
+    .embla__button {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    
+    .embla__progress-bottom {
+        width: 120px;
+        height: 3px;
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    /* Adjust right margin for small screens */
+    .embla__slide:last-child {
+        margin-right: 2rem; /* Increased right margin for small screens */
+    }
+}
+
+/* Service Card Component - Additional styling */
+.service-card-glow {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+    pointer-events: none;
+}
+
+.service-card:hover .service-card-glow {
+    opacity: 1;
+}
+
+.service-card-glow::before {
+    content: '';
+    position: absolute;
+    top: -6rem;
+    right: -6rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background:
+        radial-gradient(40% 40% at 40% 40%, color-mix(in oklab, var(--accent-primary, #B019FF) 28%, transparent) 0%, transparent 100%),
+        radial-gradient(60% 60% at 70% 70%, color-mix(in oklab, var(--accent-blue-green, #00C4CC) 20%, transparent) 0%, transparent 100%);
+    filter: blur(3rem);
+}
+
+.service-card-glow {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+    pointer-events: none;
+}
+
+.service-card:hover .service-card-glow {
+    opacity: 1;
+}
+
+.service-card-glow::before {
+    content: '';
+    position: absolute;
+    top: -6rem;
+    right: -6rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background:
+        radial-gradient(40% 40% at 40% 40%, color-mix(in oklab, var(--accent-primary, #B019FF) 28%, transparent) 0%, transparent 100%),
+        radial-gradient(60% 60% at 70% 70%, color-mix(in oklab, var(--accent-blue-green, #00C4CC) 20%, transparent) 0%, transparent 100%);
+    filter: blur(3rem);
+}
+
+/* removed hint text */
+
+/* Process Step Component */
+.process-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: 1px solid var(--border-primary);
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-normal);
+    width: 340px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.process-step:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-accent);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Enhanced text readability for Evervault effects */
+.process-step-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-secondary);
+    position: relative;
+    z-index: 25;
+}
+
+.process-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #000000;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border: 2px solid #000000;
+    box-shadow: var(--shadow-light);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 30;
+}
+
+.process-step-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin: 0;
+    flex: 1;
+    position: relative;
+    z-index: 25;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.process-step-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 25;
+}
+
+.process-step-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+    flex: 1;
+    opacity: 0.9;
+    position: relative;
+    z-index: 25;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.process-step-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.process-step-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+    flex: 1;
+    opacity: 0.9;
+}
+
+.process-step-divider {
+    position: absolute;
+    top: 50%;
+    right: -1.5rem;
+    height: 2px;
+    width: 3rem;
+    background: linear-gradient(90deg, 
+        var(--border-secondary) 0%, 
+        transparent 100%);
+    transform: translateY(-50%);
+}
+
+@media (max-width: 1023px) {
+    .process-step-divider {
+        display: none;
+    }
+}
+
+/* Enhanced carousel styling for rectangular cards */
+.embla__container { 
+    display: flex; 
+    gap: 2.5rem;
+    padding: 2.5rem;
+    padding-left: 4rem; /* Increased left padding to match the design */
+    padding-right: 6rem; /* Adjusted right padding for better spacing */
+}
+
+.embla__slide { 
+    flex: 0 0 auto;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add right margin to the last card for better spacing */
+.embla__slide:last-child {
+    margin-right: 4rem; /* Increased right margin for better spacing */
+}
+
+/* Progress Bar - Bottom Right */
+.embla__progress__bar { 
+    height: 100%; 
+    width: 100%; 
+    transform-origin: left; 
+    transform: scaleX(0); 
+    background: linear-gradient(90deg, 
+        #B019FF 0%, 
+        #8000C4 50%, 
+        #00C4CC 100%
+    ); 
+    border-radius: 9999px;
+    box-shadow: none;
+    position: relative;
+}
+
+.embla__progress__bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        transparent 100%
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Responsive adjustments for process steps */
+@media (max-width: 768px) {
+    .process-step {
+        width: 300px;
+        height: 280px;
+        padding: 1.5rem;
+    }
+    
+    .embla__container {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .process-step-title {
+        font-size: 1rem;
+    }
+    
+    .process-step-description {
+        font-size: 0.8rem;
+    }
+    
+    .process-step-number {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .process-step {
+        width: 280px;
+        height: 260px;
+        padding: 1.25rem;
+    }
+    
+    .embla__container {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .process-step-header {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+    
+    .process-step-number {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.875rem;
+        border-width: 1.5px;
+    }
+}
+
+/* Theme-specific adjustments */
+html.light .service-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .service-card:hover {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: rgba(176, 25, 255, 0.2);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+html.dark .service-card {
+    background: rgba(38, 38, 38, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark .service-card:hover {
+    background: rgba(38, 38, 38, 0.98);
+    border-color: rgba(176, 25, 255, 0.3);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+}
+
+html.light .process-step {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .process-step:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(176, 25, 255, 0.25);
+}
+
+html.light .process-step .process-step-title,
+html.light .process-step .process-step-description {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html.dark .process-step {
+    background: rgba(38, 38, 38, 0.9);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark .process-step:hover {
+    background: rgba(38, 38, 38, 0.95);
+    border-color: rgba(176, 25, 255, 0.4);
+}
+
+html.dark .process-step .process-step-title,
+html.dark .process-step .process-step-description {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme-specific adjustments for service stat cards with glass effect */
+html.light .service-stat-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(176, 25, 255, 0.15);
+    backdrop-filter: blur(15px);
+}
+
+html.light .service-stat-card:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(176, 25, 255, 0.3);
+    box-shadow: 
+        0 15px 30px -10px rgba(176, 25, 255, 0.15),
+        0 8px 16px -5px rgba(0, 0, 0, 0.1);
+}
+
+html.dark .service-stat-card {
+    background: rgba(38, 38, 38, 0.85);
+    border-color: rgba(176, 25, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+html.dark .service-stat-card:hover {
+    background: rgba(38, 38, 38, 0.95);
+    border-color: rgba(176, 25, 255, 0.4);
+    box-shadow: 
+        0 15px 30px -10px rgba(176, 25, 255, 0.25),
+        0 8px 16px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced mobile stat card styling */
+.service-stat-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-stat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    padding: 1px;
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.2), 
+        rgba(236, 72, 153, 0.2)
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-stat-card:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced mobile icon styling */
+.service-stat-icon {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.1), 
+        rgba(236, 72, 153, 0.1)
+    );
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: 1px solid rgba(176, 25, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.service-stat-card:hover .service-stat-icon {
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.2), 
+        rgba(236, 72, 153, 0.2)
+    );
+    border-color: rgba(176, 25, 255, 0.4);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Enhanced mobile number styling */
+.service-stat-number {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(135deg, #8B5CF6, #EC4899) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0 4px 8px rgba(176, 25, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-stat-card:hover .service-stat-number {
+    text-shadow: 0 6px 12px rgba(176, 25, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* Accessibility improvements */
+.service-card:focus-visible,
+.process-step:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .service-card,
+    .process-step,
+    .service-card-icon {
+        transition: none;
+    }
+    
+    .service-card:hover,
+    .process-step:hover {
+        transform: none;
+    }
+    
+    .services-bg-gradient-1,
+    .services-bg-gradient-2 {
+        animation: none;
+    }
+}
+
+/* Service Stats Section */
+.service-stats-section {
+    margin: 4rem 0;
+    padding: 2rem 0;
+}
+
+.service-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .service-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+
+.service-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-primary);
+    background: var(--bg-card);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-normal);
+}
+
+.service-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-primary);
+}
+
+.service-stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    filter: grayscale(0.3);
+    transition: var(--transition-normal);
+}
+
+.service-stat-card:hover .service-stat-icon {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.service-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .service-stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+.service-stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Theme-aware styling for desktop stat cards with enhanced glass effect */
+.service-stats-section .absolute {
+    backdrop-filter: blur(12px);
+}
+
+/* Light mode specific styling for desktop stat cards */
+html.light .service-stats-section .absolute > div {
+    background: rgba(255, 255, 255, 0.85) !important;
+    border-color: rgba(176, 25, 255, 0.15) !important;
+    color: #171717 !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+html.light .service-stats-section .absolute > div:hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(176, 25, 255, 0.3) !important;
+    box-shadow: 
+        0 20px 40px -10px rgba(176, 25, 255, 0.15),
+        0 10px 20px -5px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-4px) scale(1.03) !important;
+}
+
+/* Dark mode specific styling for desktop stat cards */
+html.dark .service-stats-section .absolute > div {
+    background: rgba(38, 38, 38, 0.85) !important;
+    border-color: rgba(176, 25, 255, 0.2) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+html.dark .service-stats-section .absolute > div:hover {
+    background: rgba(38, 38, 38, 0.95) !important;
+    border-color: rgba(176, 25, 255, 0.4) !important;
+    box-shadow: 
+        0 20px 40px -10px rgba(176, 25, 255, 0.25),
+        0 10px 20px -5px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-4px) scale(1.03) !important;
+}
+
+/* Enhanced hover effects for theme-aware cards */
+.service-stats-section .absolute > div {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* Glass morphism effects */
+.service-stats-section .absolute > div::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    padding: 1px;
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.3), 
+        rgba(236, 72, 153, 0.3),
+        rgba(139, 92, 246, 0.3)
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-stats-section .absolute > div:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced icon styling */
+.service-stats-section .absolute > div .text-3xl {
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.1), 
+        rgba(236, 72, 153, 0.1)
+    ) !important;
+    border: 1px solid rgba(176, 25, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    transition: all 0.3s ease;
+}
+
+.service-stats-section .absolute > div:hover .text-3xl {
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.2), 
+        rgba(236, 72, 153, 0.2)
+    ) !important;
+    border-color: rgba(176, 25, 255, 0.4) !important;
+    transform: scale(1.1) rotate(5deg) !important;
+}
+
+/* Enhanced number styling */
+.service-stats-section .absolute > div .text-4xl {
+    background: linear-gradient(135deg, #8B5CF6, #EC4899) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0 2px 4px rgba(176, 25, 255, 0.3) !important;
+    transition: all 0.3s ease;
+}
+
+.service-stats-section .absolute > div:hover .text-4xl {
+    text-shadow: 0 4px 8px rgba(176, 25, 255, 0.5) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Enhanced label styling */
+.service-stats-section .absolute > div .text-xs {
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.1), 
+        rgba(236, 72, 153, 0.1)
+    ) !important;
+    backdrop-filter: blur(5px) !important;
+    border: 1px solid rgba(176, 25, 255, 0.15) !important;
+    transition: all 0.3s ease;
+}
+
+.service-stats-section .absolute > div:hover .text-xs {
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.2), 
+        rgba(236, 72, 153, 0.2)
+    ) !important;
+    border-color: rgba(176, 25, 255, 0.3) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .service-card,
+    .process-step,
+    .service-stat-card {
+        border-width: 2px;
+    }
+    
+    .service-card:hover,
+    .process-step:hover,
+    .service-stat-card:hover {
+        border-width: 3px;
+    }
+}
+
+/* Enhanced Evervault Card Effect Styles */
+.process-step.group\/card {
+    position: relative;
+    overflow: hidden;
+}
+
+.process-step.group\/card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.08) 0%, 
+        rgba(0, 196, 204, 0.08) 50%, 
+        rgba(128, 0, 196, 0.08) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.process-step.group\/card:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced hover effects for evervault - more dramatic */
+.process-step.group\/card:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: var(--border-accent);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Smooth transitions for evervault elements */
+.process-step .group\/card > * {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure content stays above evervault effects with higher z-index */
+.process-step .relative.z-20 {
+    position: relative;
+    z-index: 30;
+}
+
+/* Enhanced random string text with better animation */
+.process-step .font-mono {
+    animation: textShimmer 4s ease-in-out infinite;
+    opacity: 0.4;
+    filter: blur(0.3px);
+}
+
+@keyframes textShimmer {
+    0%, 100% { opacity: 0.3; transform: translateY(0px); }
+    50% { opacity: 0.5; transform: translateY(-1px); }
+}
+
+/* Enhanced text readability with better contrast */
+.process-step .process-step-title,
+.process-step .process-step-description,
+.process-step .process-step-number {
+    position: relative;
+    z-index: 35;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Additional glow effect for better visual appeal */
+.process-step.group\/card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    padding: 1px;
+    background: linear-gradient(135deg, 
+        rgba(176, 25, 255, 0.3), 
+        rgba(0, 196, 204, 0.3),
+        rgba(128, 0, 196, 0.3)
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.process-step.group\/card:hover::after {
+    opacity: 1;
+}
