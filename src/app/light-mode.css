@@ -28,3 +28,721 @@ html.light, body.light {
   background-color: #f3f4f6 !important;
   color: #171717 !important;
 }
+
+/* Light mode enhanced styles for About Us section */
+html.light .about-page {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --bg-gradient: linear-gradient(135deg, rgba(176,25,255,0.02) 0%, rgba(0,196,204,0.02) 100%);
+  
+  --text-primary: #171717;
+  --text-secondary: #525252;
+  --text-muted: #737373;
+  --text-accent: #B019FF;
+  
+  --border-primary: rgba(0, 0, 0, 0.08);
+  --border-secondary: rgba(0, 0, 0, 0.04);
+  --border-accent: rgba(176, 25, 255, 0.2);
+  --border-hover: rgba(176, 25, 255, 0.3);
+  
+  --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 40px rgba(176, 25, 255, 0.1);
+  
+  --gradient-hover: linear-gradient(135deg, rgba(176, 25, 255, 0.12), rgba(0, 196, 204, 0.08));
+  --glass-effect: rgba(255, 255, 255, 0.9);
+  --glass-effect-hover: rgba(255, 255, 255, 0.95);
+}
+
+/* ===== COMPLETELY REWRITTEN ABOUT US SECTION STYLING ===== */
+
+/* Main About Us section - Enhanced styling without breaking layout */
+html.light #about {
+  /* Remove custom positioning that breaks layout */
+  position: relative !important;
+  /* Keep original responsive behavior from Tailwind classes */
+  /* mx-auto max-w-6xl px-6 py-24 - these are handled by Tailwind */
+}
+
+/* Enhanced background overlay without breaking layout */
+html.light #about::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.08) 0%, rgba(59, 130, 246, 0.08) 25%, rgba(16, 185, 129, 0.08) 50%, rgba(245, 158, 11, 0.08) 75%, rgba(239, 68, 68, 0.08) 100%) !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  border-radius: inherit !important;
+}
+
+/* About Us header badge - Enhanced styling with better colors */
+html.light #about .inline-flex.items-center.gap-2.px-4.py-2.rounded-full {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%) !important;
+  border: 3px solid #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  transform: scale(1.05) !important;
+}
+
+/* About Us main heading - Enhanced contrast with better colors */
+html.light #about h2 {
+  color: #1e293b !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+  font-weight: 800 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* About Us description text - Enhanced contrast with better colors */
+html.light #about p.text-lg.md\\:text-xl {
+  color: #334155 !important;
+  font-weight: 600 !important;
+  line-height: 1.7 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Feature cards - Enhanced styling with better colors */
+html.light #about .group.relative .relative.p-8.rounded-2xl {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 3px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.4s ease !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+html.light #about .group.relative .relative.p-8.rounded-2xl:hover {
+  background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%) !important;
+  border-color: #7c3aed !important;
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.25) !important;
+  transform: translateY(-5px) !important;
+}
+
+/* Feature card icons - Enhanced styling with better colors */
+html.light #about .w-14.h-14.rounded-xl {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%) !important;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3) !important;
+  transform: scale(1.05) !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Feature card icons - Ensure white color for icons inside */
+html.light #about .w-14.h-14.rounded-xl svg,
+html.light #about .w-14.h-14.rounded-xl [class*="w-7"] {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Feature card titles - Enhanced styling with better colors */
+html.light #about .text-xl.font-semibold.mb-3 {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Feature card descriptions - Enhanced contrast with better colors */
+html.light #about .text-gray-600.leading-relaxed {
+  color: #475569 !important;
+  font-weight: 600 !important;
+  line-height: 1.6 !important;
+}
+
+/* Stats cards - Enhanced styling with better colors */
+html.light #about .text-center.p-6.rounded-2xl {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 3px solid #e2e8f0 !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+html.light #about .text-center.p-6.rounded-2xl:hover {
+  background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%) !important;
+  border-color: #7c3aed !important;
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.25) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Stats numbers - Enhanced styling with better colors */
+html.light #about .text-3xl.md\\:text-4xl.font-bold {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+  font-weight: 800 !important;
+  color: #7c3aed !important;
+}
+
+/* Stats labels - Enhanced contrast with better colors */
+html.light #about .text-sm.font-medium {
+  color: #374151 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Values section title - Enhanced styling with better colors */
+html.light #about .text-2xl.md\\:text-3xl.font-bold.text-center.mb-12 {
+  color: #1e293b !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+  font-weight: 800 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Values cards - Enhanced styling with better colors */
+html.light #about .flex.items-start.gap-4.p-6.rounded-xl {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 3px solid #e2e8f0 !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+html.light #about .flex.items-start.gap-4.p-6.rounded-xl:hover {
+  background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%) !important;
+  border-color: #7c3aed !important;
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.25) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Values card icons background - Enhanced styling with better colors */
+html.light #about .w-10.h-10.rounded-lg {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%) !important;
+  box-shadow: 0 6px 15px rgba(124, 58, 237, 0.3) !important;
+  transform: scale(1.05) !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Values card icons - Ensure white color for icons inside */
+html.light #about .w-10.h-10.rounded-lg svg,
+html.light #about .w-10.h-10.rounded-lg [class*="w-5"] {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Values card titles - Enhanced styling with better colors */
+html.light #about .font-semibold.text-gray-900.mb-2 {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Values card descriptions - Enhanced contrast with better colors */
+html.light #about .text-sm.text-gray-600 {
+  color: #475569 !important;
+  font-weight: 600 !important;
+  line-height: 1.6 !important;
+}
+
+/* ===== ELEGANT CTA BUTTON STYLING FOR LIGHT MODE ===== */
+/* CTA button - Enhanced styling with better colors and FIXED visibility */
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 50%, #10b981 100%) !important;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  transform: scale(1.02) !important;
+  /* Ensure button text is visible */
+  color: #ffffff !important;
+  /* Fix CometCard animation issues */
+  position: relative !important;
+  z-index: 10 !important;
+  overflow: hidden !important;
+  /* Smooth transitions */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* CTA button text and icon - Ensure visibility */
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl span,
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl svg,
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl [class*="w-5"] {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+/* CTA button hover state - Elegant and smooth */
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 50%, #7c3aed 100%) !important;
+  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.4) !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* CTA button icon animation on hover */
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover svg,
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover [class*="w-5"] {
+  transform: translateX(3px) !important;
+}
+
+/* CTA button active/focus state */
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:active {
+  transform: translateY(0px) scale(1.01) !important;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3) !important;
+}
+
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:focus {
+  outline: 3px solid rgba(124, 58, 237, 0.3) !important;
+  outline-offset: 2px !important;
+}
+
+/* ===== COMETCARD INTEGRATION FOR ELEGANT BUTTON ===== */
+/* Fix CometCard wrapper styling to prevent unwanted effects */
+html.light #about .comet-card-wrapper,
+html.light #about [class*="comet"],
+html.light #about [class*="Comet"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  overflow: visible !important;
+}
+
+/* Remove any unwanted CometCard background effects */
+html.light #about .comet-card-wrapper::before,
+html.light #about .comet-card-wrapper::after,
+html.light #about [class*="comet"]::before,
+html.light #about [class*="comet"]::after,
+html.light #about [class*="Comet"]::before,
+html.light #about [class*="Comet"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure CometCard doesn't interfere with button styling */
+html.light #about .comet-card-wrapper *,
+html.light #about [class*="comet"] *,
+html.light #about [class*="Comet"] * {
+  background: inherit !important;
+  border: inherit !important;
+  box-shadow: inherit !important;
+}
+
+/* Specific fix for button inside CometCard */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 50%, #10b981 100%) !important;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  color: #ffffff !important;
+  position: relative !important;
+  z-index: 10 !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Hover state for button inside CometCard */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 50%, #7c3aed 100%) !important;
+  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.4) !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Remove any CometCard animation conflicts */
+html.light #about .comet-card-wrapper:hover,
+html.light #about [class*="comet"]:hover,
+html.light #about [class*="Comet"]:hover {
+  background: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure smooth transitions for button */
+html.light #about .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Enhanced background gradients for feature cards */
+html.light #about .absolute.inset-0.bg-gradient-to-r {
+  opacity: 0.15 !important;
+  filter: blur(15px) !important;
+}
+
+html.light #about .absolute.inset-0.bg-gradient-to-r:hover {
+  opacity: 0.25 !important;
+  filter: blur(12px) !important;
+}
+
+/* Enhanced text contrast for better readability */
+html.light #about * {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Additional enhancements for better visibility */
+html.light #about section {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Enhanced spacing - work with existing Tailwind classes */
+html.light #about .mb-16 {
+  margin-bottom: 4rem !important;
+}
+
+html.light #about .mb-12 {
+  margin-bottom: 3rem !important;
+}
+
+html.light #about .mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Enhanced padding for cards - work with existing Tailwind classes */
+html.light #about .p-8 {
+  padding: 2rem !important;
+}
+
+html.light #about .p-6 {
+  padding: 1.5rem !important;
+}
+
+/* ===== ADDITIONAL SPECIFIC STYLING FOR BETTER VISIBILITY ===== */
+
+/* Target specific text elements that might be hard to see */
+html.light #about .text-gray-600 {
+  color: #374151 !important;
+  font-weight: 600 !important;
+}
+
+html.light #about .text-gray-300 {
+  color: #6b7280 !important;
+  font-weight: 600 !important;
+}
+
+html.light #about .text-gray-400 {
+  color: #9ca3af !important;
+  font-weight: 600 !important;
+}
+
+/* Make all headings more prominent with better colors */
+html.light #about h1, html.light #about h2, html.light #about h3, html.light #about h4 {
+  color: #1e293b !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Make all paragraphs more readable with better colors */
+html.light #about p {
+  color: #334155 !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+
+/* Enhanced card backgrounds with stronger borders and better colors */
+html.light #about [class*="rounded"] {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 2px solid #e2e8f0 !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Make icons more visible with better colors */
+html.light #about svg, html.light #about [class*="w-"] {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* Enhanced focus states for accessibility with better colors */
+html.light #about *:focus {
+  outline: 3px solid #7c3aed !important;
+  outline-offset: 2px !important;
+}
+
+/* Better contrast for gradient text with better colors */
+html.light #about .bg-gradient-to-r {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* Additional color enhancements for better visibility */
+html.light #about .text-purple-700 {
+  color: #7c3aed !important;
+  font-weight: 600 !important;
+}
+
+html.light #about .text-purple-300 {
+  color: #a78bfa !important;
+  font-weight: 600 !important;
+}
+
+html.light #about .border-purple-200 {
+  border-color: #c4b5fd !important;
+}
+
+html.light #about .border-purple-400 {
+  border-color: #a78bfa !important;
+}
+
+html.light #about .bg-purple-50 {
+  background-color: #faf5ff !important;
+}
+
+html.light #about .bg-purple-900 {
+  background-color: #581c87 !important;
+}
+
+/* Fix for any remaining icon color issues */
+html.light #about .w-14.h-14.rounded-xl *,
+html.light #about .w-10.h-10.rounded-lg * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Ensure all icons in cards are white */
+html.light #about [class*="rounded"] svg,
+html.light #about [class*="rounded"] [class*="w-"] {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* ===== COMETCARD LIGHT MODE ENHANCEMENTS ===== */
+/* Override CometCard glare effects for light mode to be more elegant */
+html.light .perspective-distant .transform-3d > div {
+  /* Reduce the intensity of glare effects */
+  filter: brightness(1.02) contrast(1.01) !important;
+}
+
+/* Light mode specific CometCard styling */
+html.light .perspective-distant .transform-3d > div > div[class*="mix-blend-overlay"],
+html.light .perspective-distant .transform-3d > div > div[class*="mix-blend-screen"] {
+  /* Significantly reduce opacity for light mode */
+  opacity: 0.08 !important;
+  /* Use softer colors */
+  filter: saturate(0.8) brightness(1.1) !important;
+}
+
+/* Ensure CometCard doesn't interfere with button text visibility */
+html.light .perspective-distant .transform-3d > div > div[class*="z-50"] {
+  pointer-events: none !important;
+  mix-blend-mode: soft-light !important;
+}
+
+/* Light mode CometCard hover effects - more subtle */
+html.light .perspective-distant .transform-3d > div:hover {
+  transform: scale(1.02) translateZ(20px) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Light mode CometCard shadow - more elegant */
+html.light .perspective-distant .transform-3d > div {
+  box-shadow: 
+    0 4px 20px rgba(124, 58, 237, 0.08),
+    0 2px 10px rgba(59, 130, 246, 0.06),
+    0 1px 5px rgba(16, 185, 129, 0.04) !important;
+}
+
+/* Light mode CometCard hover shadow - enhanced but subtle */
+html.light .perspective-distant .transform-3d > div:hover {
+  box-shadow: 
+    0 8px 30px rgba(124, 58, 237, 0.12),
+    0 4px 15px rgba(59, 130, 246, 0.08),
+    0 2px 8px rgba(16, 185, 129, 0.06) !important;
+}
+
+/* Ensure CometCard content remains visible */
+html.light .perspective-distant .transform-3d > div > *:not([class*="z-50"]) {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Light mode CometCard rotation - more subtle */
+html.light .perspective-distant .transform-3d > div {
+  --rotate-depth: 12deg !important;
+  --translate-depth: 15px !important;
+}
+
+/* Light mode CometCard animation timing - smoother */
+html.light .perspective-distant .transform-3d > div {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Ensure button text remains crisp in CometCard */
+html.light .perspective-distant .transform-3d .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.025em !important;
+}
+
+/* Light mode CometCard button hover - enhanced visibility */
+html.light .perspective-distant .transform-3d .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
+  font-weight: 800 !important;
+}
+
+/* Remove any harsh glare effects from CometCard on light mode */
+html.light .perspective-distant .transform-3d > div::before,
+html.light .perspective-distant .transform-3d > div::after {
+  display: none !important;
+}
+
+/* Ensure CometCard doesn't create unwanted backgrounds */
+html.light .perspective-distant .transform-3d > div {
+  background: transparent !important;
+}
+
+/* Light mode CometCard focus states */
+html.light .perspective-distant .transform-3d > div:focus-within {
+  outline: 2px solid rgba(124, 58, 237, 0.3) !important;
+  outline-offset: 4px !important;
+  border-radius: 16px !important;
+}
+
+/* Light mode CometCard accessibility improvements */
+html.light .perspective-distant .transform-3d > div {
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+  transform-style: preserve-3d !important;
+}
+
+/* Ensure smooth performance for CometCard animations */
+html.light .perspective-distant .transform-3d > div {
+  contain: layout style paint !important;
+}
+
+/* ===== SPECIFIC BUTTON STYLING FOR LIGHT MODE ===== */
+/* Override any harsh effects on the CTA button specifically */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl {
+  /* Ensure button is always visible and elegant */
+  position: relative !important;
+  z-index: 20 !important;
+  /* Remove any unwanted background effects */
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 50%, #10b981 100%) !important;
+  /* Ensure text is always readable */
+  color: #ffffff !important;
+  /* Elegant border */
+  border: 2px solid rgba(255, 255, 255, 0.9) !important;
+  /* Subtle but elegant shadow */
+  box-shadow: 
+    0 8px 25px rgba(124, 58, 237, 0.25),
+    0 4px 15px rgba(59, 130, 246, 0.15),
+    0 2px 8px rgba(16, 185, 129, 0.1) !important;
+  /* Smooth transitions */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  /* Ensure no unwanted effects */
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* Hover state for elegant button */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover {
+  /* Enhanced gradient on hover */
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 50%, #7c3aed 100%) !important;
+  /* Enhanced shadow on hover */
+  box-shadow: 
+    0 12px 35px rgba(124, 58, 237, 0.35),
+    0 6px 20px rgba(59, 130, 246, 0.2),
+    0 3px 12px rgba(16, 185, 129, 0.15) !important;
+  /* Subtle transform */
+  transform: translateY(-2px) scale(1.02) !important;
+  /* Enhanced border */
+  border-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Active state for elegant button */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:active,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:active,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:active {
+  transform: translateY(0px) scale(1.01) !important;
+  box-shadow: 
+    0 6px 20px rgba(124, 58, 237, 0.25),
+    0 3px 12px rgba(59, 130, 246, 0.15),
+    0 1px 6px rgba(16, 185, 129, 0.1) !important;
+}
+
+/* Focus state for accessibility */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:focus,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:focus,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:focus {
+  outline: 3px solid rgba(124, 58, 237, 0.4) !important;
+  outline-offset: 3px !important;
+}
+
+/* Ensure button text and icon are always visible */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl span,
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl svg,
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl [class*="w-5"],
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl span,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl svg,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl [class*="w-5"],
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl span,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl svg,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl [class*="w-5"] {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Icon animation on hover */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover svg,
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover [class*="w-5"],
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover svg,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover [class*="w-5"],
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover svg,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl:hover [class*="w-5"] {
+  transform: translateX(4px) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+/* Remove any CometCard interference with button */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl::before,
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl::after,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl::before,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl::after,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl::before,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure button has proper contrast and visibility */
+html.light #about .comet-card-wrapper .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about [class*="comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl,
+html.light #about [class*="Comet"] .group.inline-flex.items-center.gap-3.px-8.py-4.rounded-2xl {
+  /* Enhanced text shadow for better readability */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+  /* Ensure proper font weight */
+  font-weight: 700 !important;
+  /* Letter spacing for elegance */
+  letter-spacing: 0.025em !important;
+  /* Ensure no text overflow */
+  white-space: nowrap !important;
+  /* Proper text alignment */
+  text-align: center !important;
+  /* Ensure proper sizing */
+  min-width: fit-content !important;
+  /* Prevent any unwanted transformations */
+  transform-origin: center !important;
+}

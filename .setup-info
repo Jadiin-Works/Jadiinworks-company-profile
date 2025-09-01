@@ -1,5 +1,5 @@
 ﻿# Setup Information for Jadiinworks Company Profile
-Last Setup: 2025-08-30 17:35:01
+Last Setup: 2025-09-01 23:30:00
 Node Version: v22.2.0
 NPM Version: 10.7.0
 Dependencies Status: Complete
@@ -10,7 +10,7 @@ Project Details:
 - React: 18.3.1
 - Tailwind CSS: 4.1.12
 - ESLint: 9.0.0
-- TypeScript: Enabled
+- TypeScript: 5.9.2
 
 Key Libraries:
 - Framer Motion: 12.23.12
@@ -18,3 +18,16 @@ Key Libraries:
 - Embla Carousel: 8.6.0
 - Lucide React: 0.542.0
 - Phosphor Icons: 2.1.10
+- Tabler Icons: 3.34.1
+- FontAwesome Free: 7.0.0
+- CLSX: 2.1.1
+- Tailwind Merge: 3.3.1
+- Motion: 12.23.12
+
+Dev Dependencies:
+- ESLint: 9.0.0
+- ESLint Config Next: 15.5.1
+- TypeScript: 5.9.2
+- @types/react: 18.3.12
+- @types/node: 24.3.0
+- @eslint/eslintrc: 3.0.0

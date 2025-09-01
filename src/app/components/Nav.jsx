@@ -64,6 +64,12 @@ export default function Nav() {
 	useEffect(() => {
 		if (!mounted) return;
 		
+		// Set active state based on current pathname
+		if (pathname === '/about') {
+			setActive('about');
+			return;
+		}
+		
 		// Only handle scroll-based active state on the homepage
 		if (pathname !== '/') return;
 		
@@ -99,6 +105,12 @@ export default function Nav() {
 	const handleNavClick = (e, targetId) => {
 		e.preventDefault();
 		closeMenu();
+		
+		// Special handling for About Us - navigate to dedicated page
+		if (targetId === 'about') {
+			router.push('/about');
+			return;
+		}
 		
 		// If we're on the homepage, always use smooth scrolling to sections
 		if (pathname === '/') {
@@ -166,7 +178,7 @@ export default function Nav() {
 					<a href="#home" className={linkClass('home')} onClick={(e) => handleNavClick(e, 'home')}>Home</a>
 					<a href="#services" className={linkClass('services')} onClick={(e) => handleNavClick(e, 'services')}>Services</a>
 					<a href="#portfolios" className={linkClass('portfolios')} onClick={(e) => handleNavClick(e, 'portfolios')}>Portfolios</a>
-					<a href="#about" className={linkClass('about')} onClick={(e) => handleNavClick(e, 'about')}>About Us</a>
+					<a href="/about" className={linkClass('about')} onClick={(e) => handleNavClick(e, 'about')}>About Us</a>
 					<a href="#contact" className={linkClass('contact')} onClick={(e) => handleNavClick(e, 'contact')}>Contact Us</a>
 				</div>
 				<div className="jw-cta">
@@ -220,7 +232,7 @@ export default function Nav() {
 						<a href="#home" className="jw-link" onClick={(e) => handleNavClick(e, 'home')}>Home</a>
 						<a href="#services" className="jw-link" onClick={(e) => handleNavClick(e, 'services')}>Services</a>
 						<a href="#portfolios" className="jw-link" onClick={(e) => handleNavClick(e, 'portfolios')}>Portfolios</a>
-						<a href="#about" className="jw-link" onClick={(e) => handleNavClick(e, 'about')}>About Us</a>
+						<a href="/about" className="jw-link" onClick={(e) => handleNavClick(e, 'about')}>About Us</a>
 						<a href="#contact" className="jw-link" onClick={(e) => handleNavClick(e, 'contact')}>Contact Us</a>
 					</div>
 				</div>
