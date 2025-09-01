@@ -16,7 +16,7 @@ module.exports = {
         white: '#F5F5F7',
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
       },
     },
   },

@@ -1,0 +1,79 @@
+/* TAILWIND THEME CSS - Using Tailwind utilities */
+
+/* Base theme classes using Tailwind */
+@layer base {
+  /* Dark mode base styles */
+  html.dark {
+    @apply bg-black text-white;
+  }
+  
+  body.dark {
+    @apply bg-black text-white;
+  }
+  
+  /* Light mode base styles */
+  html.light {
+    @apply bg-white text-gray-900;
+  }
+  
+  body.light {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  /* Dark mode homepage */
+  .dark-mode-homepage {
+    @apply bg-black text-white;
+  }
+  
+  /* Light mode homepage */
+  .light-mode-homepage {
+    @apply bg-white text-gray-900;
+  }
+  
+  /* Dark mode buttons */
+  .dark-mode-homepage button {
+    @apply bg-transparent text-white border border-gray-600;
+  }
+  
+  .dark-mode-homepage button:hover {
+    @apply bg-gray-800;
+  }
+  
+  .dark-mode-homepage button.active {
+    @apply bg-gray-800 text-white;
+  }
+  
+  /* Light mode buttons */
+  .light-mode-homepage button {
+    @apply bg-transparent text-gray-900 border border-gray-300;
+  }
+  
+  .light-mode-homepage button:hover {
+    @apply bg-gray-100;
+  }
+  
+  .light-mode-homepage button.active {
+    @apply bg-gray-100 text-gray-900;
+  }
+}
+
+/* Custom theme utilities */
+@layer utilities {
+  .theme-transition {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  
+  .theme-bg {
+    @apply bg-white dark:bg-black;
+  }
+  
+  .theme-text {
+    @apply text-gray-900 dark:text-white;
+  }
+  
+  .theme-border {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+}

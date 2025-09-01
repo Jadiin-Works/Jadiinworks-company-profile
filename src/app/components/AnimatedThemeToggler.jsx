@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { useTheme } from "./ThemeProvider";
 
 export const AnimatedThemeToggler = ({ className }) => {
-  const { theme, setTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
   const buttonRef = useRef(null);
@@ -21,6 +21,7 @@ export const AnimatedThemeToggler = ({ className }) => {
   useEffect(() => {
     const calculateIsDark = () => {
       if (theme === "dark") return true;
+      if (theme === "light") return false;
       if (theme === "system" && typeof window !== 'undefined' && window.matchMedia) {
         return window.matchMedia('(prefers-color-scheme: dark)').matches;
       }
@@ -43,11 +44,7 @@ export const AnimatedThemeToggler = ({ className }) => {
 
     await document.startViewTransition(() => {
       flushSync(() => {
-        if (theme === "system") {
-          setTheme(isDark ? "light" : "dark");
-        } else {
-          setTheme(theme === "dark" ? "light" : "dark");
-        }
+        toggleTheme();
       });
     }).ready;
 

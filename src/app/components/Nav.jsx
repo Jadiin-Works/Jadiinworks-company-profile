@@ -100,7 +100,13 @@ export default function Nav() {
 		e.preventDefault();
 		closeMenu();
 		
-		// If we're on the homepage, always use smooth scrolling to sections
+		// Special handling for portfolios - navigate to portfolio page
+		if (targetId === 'portfolios') {
+			router.push('/portfolio');
+			return;
+		}
+		
+		// If we're on the homepage, use smooth scrolling to sections
 		if (pathname === '/') {
 			const targetElement = document.getElementById(targetId);
 			if (targetElement) {
@@ -117,14 +123,7 @@ export default function Nav() {
 		router.push(`/#${targetId}`);
 	};
 
-	// Handle brand click to go to home
-	const handleBrandClick = (e) => {
-		e.preventDefault();
-		closeMenu();
-		
-		// Always navigate to homepage
-		router.push('/');
-	};
+
 
 	if (!mounted) {
 		return null;
@@ -133,7 +132,7 @@ export default function Nav() {
 	return (
 		<nav className={`jw-nav ${scrolled ? 'scrolled' : ''}`}>
 			<div className="jw-nav-inner">
-				<div className="jw-brand" onClick={handleBrandClick}>
+				<Link href="/" className="jw-brand" onClick={closeMenu}>
 					<div className="jw-logo-container">
 						<img 
 							src="/Logomark.png" 
@@ -160,14 +159,14 @@ export default function Nav() {
 							<text x="16" y="18" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="bold" fill="white">J</text>
 						</svg>
 					</div>
-					<span className="jw-brand-text">adiin</span>
-				</div>
+					{/* <span className="jw-brand-text"></span> */}
+				</Link>
 				<div className="jw-links">
-					<a href="#home" className={linkClass('home')} onClick={(e) => handleNavClick(e, 'home')}>Home</a>
-					<a href="#services" className={linkClass('services')} onClick={(e) => handleNavClick(e, 'services')}>Services</a>
-					<a href="#portfolios" className={linkClass('portfolios')} onClick={(e) => handleNavClick(e, 'portfolios')}>Portfolios</a>
-					<a href="#about" className={linkClass('about')} onClick={(e) => handleNavClick(e, 'about')}>About Us</a>
-					<a href="#contact" className={linkClass('contact')} onClick={(e) => handleNavClick(e, 'contact')}>Contact Us</a>
+					<Link href="/" className={linkClass('home')} onClick={closeMenu}>Home</Link>
+					<Link href="/#services" className={linkClass('services')} onClick={closeMenu}>Services</Link>
+					<Link href="/portfolio" className={linkClass('portfolios')} onClick={closeMenu}>Portfolios</Link>
+					<Link href="/#about" className={linkClass('about')} onClick={closeMenu}>About Us</Link>
+					<Link href="/#contact" className={linkClass('contact')} onClick={closeMenu}>Contact Us</Link>
 				</div>
 				<div className="jw-cta">
 					{mounted && (
@@ -183,7 +182,7 @@ export default function Nav() {
 			<div className={`jw-drawer ${menuOpen ? 'open' : ''}`} onClick={closeMenu}>
 				<div className="jw-drawer-panel" onClick={(e) => e.stopPropagation()}>
 									<div className="jw-drawer-head">
-					<div className="jw-brand" onClick={handleBrandClick}>
+					<Link href="/" className="jw-brand" onClick={closeMenu}>
 						<div className="jw-logo-container">
 							<img 
 								src="/Logomark.png" 
@@ -211,17 +210,17 @@ export default function Nav() {
 							</svg>
 						</div>
 						<span className="jw-brand-text">adiin</span>
-					</div>
+					</Link>
 					<button aria-label="Close menu" className={`jw-burger ${menuOpen ? 'open' : ''}`} onClick={closeMenu}>
 						<span className="burger-lines"><span /></span>
 					</button>
 				</div>
 					<div className="jw-drawer-links">
-						<a href="#home" className="jw-link" onClick={(e) => handleNavClick(e, 'home')}>Home</a>
-						<a href="#services" className="jw-link" onClick={(e) => handleNavClick(e, 'services')}>Services</a>
-						<a href="#portfolios" className="jw-link" onClick={(e) => handleNavClick(e, 'portfolios')}>Portfolios</a>
-						<a href="#about" className="jw-link" onClick={(e) => handleNavClick(e, 'about')}>About Us</a>
-						<a href="#contact" className="jw-link" onClick={(e) => handleNavClick(e, 'contact')}>Contact Us</a>
+						<Link href="/" className="jw-link" onClick={closeMenu}>Home</Link>
+						<Link href="/#services" className="jw-link" onClick={closeMenu}>Services</Link>
+						<Link href="/portfolio" className="jw-link" onClick={closeMenu}>Portfolios</Link>
+						<Link href="/#about" className="jw-link" onClick={closeMenu}>About Us</Link>
+						<Link href="/#contact" className="jw-link" onClick={closeMenu}>Contact Us</Link>
 					</div>
 				</div>
 			</div>

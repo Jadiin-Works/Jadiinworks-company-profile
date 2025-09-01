@@ -1,10 +1,10 @@
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import "./dark-mode.css";
-import "./light-mode.css";
+import "./tailwind-theme.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400","500","600","700","800"] });
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["100","200","300","400","500","600","700","800","900"] });
 
 export default function RootLayout({ children }) {
   return (
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#B019FF" />
         <meta name="msapplication-TileColor" content="#B019FF" />
       </head>
-      <body className={plusJakarta.className}>
+      <body className={poppins.className}>
         {children}
       </body>
     </html>

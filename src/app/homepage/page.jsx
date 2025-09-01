@@ -2,7 +2,6 @@
 
 import { useTheme } from "../components/ThemeProvider";
 import ClientLayout from "../components/ClientLayout";
-import Nav from "../components/Nav";
 import { useEffect, useState } from "react";
 
 export default function Homepage() {

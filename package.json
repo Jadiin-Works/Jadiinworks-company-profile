@@ -21,8 +21,10 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
     "@phosphor-icons/react": "^2.1.10",
+    "@radix-ui/react-dialog": "^1.1.15",
     "@tabler/icons-react": "^3.34.1",
     "clsx": "^2.1.1",
+    "cobe": "^0.6.4",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.12",
     "lottie-react": "^2.4.1",

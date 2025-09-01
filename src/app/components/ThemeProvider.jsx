@@ -33,14 +33,12 @@ export function ThemeProvider({ children }) {
 			let effective;
 			
 			if (theme === "system") {
-				// Use WIB time (Indonesia timezone) to determine theme
-				const now = new Date();
-				const wibTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Jakarta" }));
-				const hour = wibTime.getHours();
-				// Dark mode: 18:00 - 06:00 (6 PM - 6 AM)
-				// Light mode: 06:00 - 18:00 (6 AM - 6 PM)
-				const isNight = hour >= 18 || hour < 6;
-				effective = isNight ? "dark" : "light";
+				// Use system preference
+				if (typeof window !== 'undefined' && window.matchMedia) {
+					effective = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+				} else {
+					effective = "light"; // fallback
+				}
 			} else {
 				effective = theme;
 			}
@@ -49,7 +47,7 @@ export function ThemeProvider({ children }) {
 			root.classList.remove("dark", "light");
 			body.classList.remove("dark", "light");
 			
-			// Add new theme class
+			// Add new theme class - Tailwind will handle the styling via CSS
 			root.classList.add(effective);
 			body.classList.add(effective);
 			
@@ -65,10 +63,6 @@ export function ThemeProvider({ children }) {
 			if (metaAppleStatusBar) {
 				metaAppleStatusBar.setAttribute('content', effective === "dark" ? "black-translucent" : "default");
 			}
-			
-			// Update document background color immediately
-			root.style.backgroundColor = effective === "dark" ? "#1A1A1A" : "#ffffff";
-			body.style.backgroundColor = effective === "dark" ? "#1A1A1A" : "#ffffff";
 		}
 	}, [theme]);
 

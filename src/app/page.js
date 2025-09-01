@@ -125,7 +125,11 @@ function HomePageContent() {
 					</CometCard>
 				</div>
 			</section>
-			<section id="portfolios" className="mx-auto max-w-4xl px-6 py-24 opacity-80">Portfolios section</section>
+			{/* Import and use PortfoliosComponent */}
+			{(() => {
+				const { PortfoliosComponent } = require('./components/navbar');
+				return <PortfoliosComponent />;
+			})()}
 			<section id="about" className="mx-auto max-w-4xl px-6 py-24 opacity-80">About us section</section>
 			<section id="contact" className="mx-auto max-w-4xl px-6 py-24 opacity-80">Contact us section</section>
 			</>
