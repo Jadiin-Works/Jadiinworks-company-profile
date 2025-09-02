@@ -13,9 +13,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const initTheme = `
+    const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem('theme'); // 'light' | 'dark' | null (system)
+    const isDark = saved ? saved === 'dark' : preferDark;
+    document.documentElement.classList.toggle('dark', isDark);
+  `;
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: initTheme }} />
+      </head>
+      <body className={`${poppins.variable} antialiased bg-white text-black dark:bg-black dark:text-white`}>
         {children}
       </body>
     </html>
