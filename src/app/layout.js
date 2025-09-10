@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
     document.documentElement.classList.toggle('dark', isDark);
   `;
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: initTheme }} />
       </head>
-      <body className={`${poppins.variable} antialiased bg-white text-black dark:bg-black dark:text-white`}>
+      <body className={`${poppins.variable} font-[var(--font-poppins)] antialiased bg-white text-black dark:bg-black dark:text-white`}>
         {children}
       </body>
     </html>
