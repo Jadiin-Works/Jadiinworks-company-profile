@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/hero-gallery-scroll-animation"
 
 const UIUX_IMAGES = [
-  "/Assets/porto-uiux/ecommerce1.png",
-  "/Assets/porto-uiux/dashboard1.png",
-  "/Assets/porto-uiux/brand1.png",
-  "/Assets/porto-uiux/ecommerce2.png",
-  "/Assets/porto-uiux/dashboard2.png",
+  "/Assets/porto-uiux/but1.png",
+  "/Assets/porto-uiux/mice1.png",
+  "/Assets/porto-uiux/laporkuy3.png",
+  "/Assets/porto-uiux/cyberarmy1.png",
+  "/Assets/porto-uiux/damai3.png",
 ]
 
 const UIUXGalleryDemo = () => {

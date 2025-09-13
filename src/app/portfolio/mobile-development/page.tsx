@@ -126,11 +126,11 @@ export default function MobileDevelopmentPage() {
           <p className="text-xl text-purple-100 mb-8">
             Mari wujudkan ide mobile app Anda dan jadikan bagian dari portfolio mobile development kami yang mengesankan.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-              Mulai Proyek
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+          <div className="flex justify-center">
+            <button 
+              onClick={() => window.open('https://wa.me/6287775563789?text=Halo, saya ingin konsultasi tentang mobile development', '_blank')}
+              className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            >
               Konsultasi Gratis
             </button>
           </div>

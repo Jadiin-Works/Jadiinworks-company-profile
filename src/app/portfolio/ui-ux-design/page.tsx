@@ -21,43 +21,43 @@ export default function UIUXDesignPage() {
         <Timeline
           data={[
             {
-              title: 'E-commerce Mobile App Redesign',
+              title: 'Sonsaur - Web Game Redesign',
               content: (
                 <div>
                   <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                    Redesign aplikasi e-commerce dengan fokus pada user experience dan conversion rate optimization. Meningkatkan engagement user sebesar 40% dan conversion rate sebesar 25%.
+                    Proyek redesign web game untuk Sonsaur dengan pendekatan UI/UX modern, meningkatkan kemudahan navigasi dan visual yang lebih engaging. Hasilnya, user retention dan kepuasan pengguna meningkat signifikan.
                   </p>
                   <div className="grid grid-cols-2 gap-4">
-                    <Image src="/Assets/porto-uiux/ecommerce1.png" alt="ecommerce app" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
-                    <Image src="/Assets/porto-uiux/ecommerce2.png" alt="ecommerce app" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
+                    <Image src="/Assets/porto-uiux/sonsaur1.jpg" alt="ecommerce app" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
+                    <Image src="/Assets/porto-uiux/sonsaur2.png" alt="ecommerce app" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
                   </div>
                 </div>
               ),
             },
             {
-              title: 'SaaS Dashboard Design',
+              title: 'Sorgumology Landing Page',
               content: (
                 <div>
                   <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                    Dashboard admin yang clean dan functional untuk platform SaaS dengan data visualization yang intuitif. Mengurangi waktu onboarding user baru sebesar 60%.
+                    Landing page interaktif untuk Sorgumology yang menonjolkan keunggulan produk dan kemudahan akses informasi. Desain responsif dan visual yang engaging berhasil meningkatkan conversion rate secara signifikan.
                   </p>
                   <div className="grid grid-cols-2 gap-4">
-                    <Image src="/Assets/porto-uiux/dashboard1.png" alt="dashboard design" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
-                    <Image src="/Assets/porto-uiux/dashboard2.png" alt="dashboard design" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
+                    <Image src="/Assets/porto-uiux/sorgum1.png" alt="dashboard design" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
+                    <Image src="/Assets/porto-uiux/sorgum2.png" alt="dashboard design" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
                   </div>
                 </div>
               ),
             },
             {
-              title: 'Brand Identity & Visual System',
+              title: 'Uplink - Crypto Trading',
               content: (
                 <div>
                   <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
                     Identitas visual lengkap untuk startup teknologi dengan logo, color palette, dan brand guidelines yang konsisten. Meningkatkan brand recognition sebesar 80%.
                   </p>
                   <div className="grid grid-cols-2 gap-4">
-                    <Image src="/Assets/porto-uiux/brand1.png" alt="brand identity" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
-                    <Image src="/Assets/porto-uiux/brand2.png" alt="brand identity" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
+                    <Image src="/Assets/porto-uiux/uplink.png" alt="brand identity" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
+                    <Image src="/Assets/porto-uiux/uplink2.png" alt="brand identity" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-70 w-full" />
                   </div>
                 </div>
               ),
@@ -126,11 +126,11 @@ export default function UIUXDesignPage() {
           <p className="text-xl text-purple-100 mb-8">
             Mari wujudkan visi desain Anda dengan pendekatan user-centered design yang terbukti efektif dan jadikan bagian dari portfolio design kami yang mengesankan.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-              Mulai Proyek
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+          <div className="flex justify-center">
+            <button 
+              onClick={() => window.open('https://wa.me/6287775563789?text=Halo, saya ingin konsultasi tentang UI/UX design', '_blank')}
+              className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            >
               Konsultasi Gratis
             </button>
           </div>

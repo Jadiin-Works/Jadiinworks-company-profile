@@ -5,7 +5,7 @@ import LottieHero from '@/components/ui/webdev-lottiehero';
 import { Timeline } from '@/components/ui/timeline';
 import Image from 'next/image';
 import { IconCloud } from '@/components/ui/interactive-icon-cloud';
-import { HeroDemo1, HeroDemo2, HeroDemo3 } from '@/components/ui/hero-gallery-demo';
+import { HeroDemo1 } from '@/components/ui/hero-gallery-demo';
 import Footer from '@/components/ui/footer';
 
 
@@ -131,11 +131,11 @@ export default function WebDevelopmentPage() {
           <p className="text-xl text-purple-100 mb-8">
             Mari wujudkan ide web development Anda dan jadikan bagian dari gallery portfolio kami yang mengesankan.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-              Mulai Proyek
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+          <div className="flex justify-center">
+            <button 
+              onClick={() => window.open('https://wa.me/6287775563789?text=Halo, saya ingin konsultasi tentang web development', '_blank')}
+              className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            >
               Konsultasi Gratis
             </button>
           </div>
