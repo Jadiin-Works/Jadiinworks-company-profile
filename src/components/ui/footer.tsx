@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { IconBrandGithub, IconBrandLinkedin, IconMail } from "@tabler/icons-react";
+import { IconBrandWhatsapp, IconBrandInstagram, IconMail } from "@tabler/icons-react";
 
 type FooterLink = {
   label: string;
@@ -9,14 +9,16 @@ type FooterLink = {
 };
 
 const company: FooterLink[] = [
-  { label: "About", href: "/portfolio" },
-  { label: "Services", href: "/#services" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Tentang Kami", href: "/portfolio" },
+  { label: "Layanan", href: "/portfolio" },
+  { label: "Kontak", href: "/portfolio" },
 ];
 
 const products: FooterLink[] = [
   { label: "Web Development", href: "/portfolio/web-development" },
-  { label: "Automation", href: "/portfolio/automation-bot" },
+  { label: "Mobile Development", href: "/portfolio/mobile-development" },
+  { label: "UI/UX Design", href: "/portfolio/ui-ux-design" },
+  { label: "Automation Bot", href: "/portfolio/automation-bot" },
 ];
 
 export default function Footer() {
@@ -35,24 +37,24 @@ export default function Footer() {
               />
               <span className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">Jadiin Works</span>
             </Link>
-            <p className="max-w-md text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-              We craft fast, modern, and scalable digital products. Focused on clean UX, performance, and business impact.
-            </p>
+             <p className="max-w-md text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+               Kami menghadirkan solusi digital yang powerful dan user-friendly. Fokus pada clean UX, performa optimal, dan dampak bisnis yang nyata.
+             </p>
             <div className="flex items-center gap-3 pt-2">
-              <Link href="mailto:hello@jadiinworks.com" aria-label="Email" className="rounded-md p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900">
+              <Link href="mailto:jadiinworks@gmail.com" aria-label="Email" className="rounded-md p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900">
                 <IconMail size={20} />
               </Link>
-              <Link href="https://github.com" aria-label="GitHub" className="rounded-md p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900">
-                <IconBrandGithub size={20} />
+              <Link href="https://wa.me/6287775563789" aria-label="WhatsApp" className="rounded-md p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900">
+                <IconBrandWhatsapp size={20} />
               </Link>
-              <Link href="https://linkedin.com" aria-label="LinkedIn" className="rounded-md p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900">
-                <IconBrandLinkedin size={20} />
+              <Link href="https://instagram.com/jadiinworks" aria-label="Instagram" className="rounded-md p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900">
+                <IconBrandInstagram size={20} />
               </Link>
             </div>
           </div>
 
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Company</h3>
+           <div>
+             <h3 className="mb-3 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Perusahaan</h3>
             <ul className="space-y-2 text-sm">
               {company.map((item) => (
                 <li key={item.label}>
@@ -64,8 +66,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Products</h3>
+           <div>
+             <h3 className="mb-3 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Layanan</h3>
             <ul className="space-y-2 text-sm">
               {products.map((item) => (
                 <li key={item.label}>
@@ -82,11 +84,11 @@ export default function Footer() {
       <div className="border-t border-neutral-200 dark:border-neutral-800">
         <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-neutral-500 dark:text-neutral-400">© {year} Jadiinworks. All rights reserved.</p>
-          <div className="flex items-center gap-4 text-xs">
-            <Link href="/privacy" className="hover:text-neutral-900 dark:hover:text-neutral-100">Privacy</Link>
-            <span className="h-3 w-px bg-neutral-300 dark:bg-neutral-700" />
-            <Link href="/terms" className="hover:text-neutral-900 dark:hover:text-neutral-100">Terms</Link>
-          </div>
+           <div className="flex items-center gap-4 text-xs">
+             <Link href="/privacy" className="hover:text-neutral-900 dark:hover:text-neutral-100">Kebijakan Privasi</Link>
+             <span className="h-3 w-px bg-neutral-300 dark:bg-neutral-700" />
+             <Link href="/terms" className="hover:text-neutral-900 dark:hover:text-neutral-100">Syarat & Ketentuan</Link>
+           </div>
         </div>
       </div>
     </footer>
