@@ -2,12 +2,12 @@
 
 import React from "react";
 import { Card, Carousel } from "./MobileCarousel";
-import Sorgum from "@/../public/assets/porto-uiux/sorgum.jpeg";
-import AbsensyWeb from "@/../public/assets/porto-web/absensy1.png";
-import Damai from "@/../public/assets/porto-uiux/damai1.png";
-import Kolabcenter from "@/../public/assets/porto-mobile/kolabcenter1.png";
-import Kasirkita from "@/../public/assets/porto-mobile/kasirkita1.png";
-import N8n from "@/../public/assets/porto-ai/n8n.jpg";
+import Sorgum from "/assets/porto-uiux/sorgum.jpeg";
+import AbsensyWeb from "/assets/porto-web/absensy1.png";
+import Damai from "/assets/porto-uiux/damai1.png";
+import Kolabcenter from "/assets/porto-mobile/kolabcenter1.png";
+import Kasirkita from "/assets/porto-mobile/kasirkita1.png";
+import N8n from "/assets/porto-ai/n8n.jpg";
 
 export function AppleCardsCarouselDemo() {
     const cards = data.map((card, index) => (
