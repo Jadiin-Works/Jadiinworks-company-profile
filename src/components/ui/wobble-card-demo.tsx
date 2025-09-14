@@ -22,7 +22,7 @@ export default function WobbleCardDemo() {
           </p>
         </div>
         {/* Right-aligned mock UI image (online) */}
-        <div className="pointer-events-none absolute right-[-1%] bottom-[-16%] h-[64%] w-[90%] md:w-[70%] lg:w-[50%]">
+        <div className="pointer-events-none absolute right-[-1%] bottom-[-28%] h-[64%] w-[90%] md:w-[70%] lg:w-[50%]">
           <Image
             src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop"
             unoptimized
@@ -62,7 +62,7 @@ export default function WobbleCardDemo() {
             developers.
           </p>
         </div>
-        <div className="pointer-events-none absolute right-[-1%] bottom-[-25%] h-[84%] w-[80%] md:w-[50%] lg:w-[50%] lg:h-[99%]">
+        <div className="pointer-events-none absolute right-[-1%] bottom-[-35%] h-[84%] w-[86%] md:w-[50%] lg:w-[50%] lg:h-[99%]">
           <Image
             src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop"
             unoptimized
