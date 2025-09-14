@@ -1,6 +1,7 @@
+import { LottieSkeleton } from "@/components/bento-grid-demo-2";
 import Image from "next/image";
 
-export function Browser({ src, alt }) {
+export function Browser({ src }) {
     return (
         <figure className="relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] dark:shadow-[0_2.75rem_3.5rem_-2rem_rgb(0_0_0_/_20%),_0_0_5rem_-2rem_rgb(0_0_0_/_15%)] rounded-b-lg">
             <div className="relative flex items-center max-w-3xl bg-gray-800 rounded-t-lg py-2 px-24 dark:bg-neutral-700">
@@ -13,7 +14,7 @@ export function Browser({ src, alt }) {
             </div>
 
             <div className="bg-gray-800 rounded-b-lg">
-                <Image className="max-w-full h-auto rounded-b-lg" src={src} alt={alt} />
+                <LottieSkeleton animationDataCustom={src} />
             </div>
         </figure>
     );

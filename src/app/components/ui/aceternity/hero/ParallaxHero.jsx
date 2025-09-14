@@ -2,6 +2,7 @@
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { FlipWords } from "../text/FlipWord";
+import Image from "next/image";
 
 
 
@@ -93,7 +94,7 @@ export const ProductCard = ({
             key={product.title}
             className="group/product h-96 w-[30rem] relative shrink-0">
             <a href={product.link} className="block group-hover/product:shadow-2xl ">
-                <img
+                <Image
                     src={product.thumbnail}
                     height="600"
                     width="600"

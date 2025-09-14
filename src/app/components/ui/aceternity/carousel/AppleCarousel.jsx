@@ -2,6 +2,12 @@
 
 import React from "react";
 import { Card, Carousel } from "./MobileCarousel";
+import Sorgum from "@/../public/assets/porto-uiux/sorgum.jpeg";
+import AbsensyWeb from "@/../public/assets/porto-web/absensy1.png";
+import Damai from "@/../public/assets/porto-uiux/damai1.png";
+import Kolabcenter from "@/../public/assets/porto-mobile/kolabcenter1.png";
+import Kasirkita from "@/../public/assets/porto-mobile/kasirkita1.png";
+import N8n from "@/../public/assets/porto-ai/n8n.jpg";
 
 export function AppleCardsCarouselDemo() {
     const cards = data.map((card, index) => (
@@ -54,50 +60,38 @@ const data = [
     {
         category: "Website Development",
         title: "You can do more with AI.",
-        src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: Sorgum.src,
         content: <DummyContent />,
     },
     {
         category: "UI/UX Redesign",
         title: "Enhance your productivity.",
-        src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: Damai.src,
         content: <DummyContent />,
     },
     {
         category: "AI Development",
         title: "Launching the new Apple Vision Pro.",
-        src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: Kolabcenter.src,
         content: <DummyContent />,
     },
 
     {
         category: "IoT Development",
         title: "Maps for your iPhone 15 Pro Max.",
-        src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: AbsensyWeb.src,
         content: <DummyContent />,
     },
     {
         category: "Mobile App Development",
         title: "Photography just got better.",
-        src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: Kasirkita.src,
         content: <DummyContent />,
     },
     {
-        category: "Mobile App Development",
+        category: "AI Agent Development",
         title: "Photography just got better.",
-        src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: N8n.src,
         content: <DummyContent />,
-    },
-    {
-        category: "Mobile App Development",
-        title: "Photography just got better.",
-        src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        content: <DummyContent />,
-    },
-    {
-        category: "Mobile App Development",
-        title: "Photography just got better.",
-        src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        content: <DummyContent />,
-    },
+    }
 ];

@@ -46,7 +46,7 @@ const Skeleton = ({ src, alt }: { src: string; alt: string }) => (
   </div>
 );
 
-const LottieSkeleton = () => {
+export const LottieSkeleton = ({ animationDataCustom = null}) => {
   const [animationData, setAnimationData] = useState<any>(null);
 
   // ref ke instance Lottie dengan typing benar
@@ -67,7 +67,7 @@ const LottieSkeleton = () => {
     lottieRef.current?.play();
   };
 
-  if (!animationData) {
+  if (!animationData && !animationDataCustom) {
     return (
       <div className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-900">
         <div className="w-full h-full flex items-center justify-center">
@@ -82,7 +82,7 @@ const LottieSkeleton = () => {
     <div className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-900">
       <Lottie
         lottieRef={lottieRef}             // ref ke instance
-        animationData={animationData}
+        animationData={animationDataCustom || animationData}
         loop={false}                      // loop manual
         autoplay
         onComplete={handleComplete}       // setiap selesai → balik arah
