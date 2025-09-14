@@ -7,6 +7,7 @@ import HorizontalReveal from "@/components/ui/horizontal-reveal";
 import { IconCrown, IconPuzzle2, IconBulb } from "@tabler/icons-react";
 import WobbleCardDemo from "@/components/ui/wobble-card-demo";
 import BentoGridSecondDemo from "@/components/bento-grid-demo-2";
+import SpotlightTentangKamiDemo from "@/components/spotlight-tentangkami-demo";
 
 
 export const metadata = {
@@ -19,17 +20,8 @@ export default function AboutPage() {
       <NavbarDemo />
 
       {/* Hero / Story */}
-      <section className="min-h-[70vh] md:h-screen w-full rounded-md flex items-center justify-center bg-white dark:bg-black antialiased bg-grid-black/[0.02] dark:bg-grid-white/[0.02] relative overflow-hidden">
-        <Spotlight />
-        <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-28 md:pt-0 text-center">
-          <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-600 via-purple-400 to-blue-400 dark:from-purple-400 dark:via-purple-300 dark:to-blue-300 leading-[1.15] pb-1 md:pb-2 inline-block">   
-            Tentang <br /> Jadiinworks
-          </h1>
-          <p className="mt-4 text-base md:text-lg dark:text-neutral-300 max-w-2xl mx-auto">
-            Kami, Arbi dan Jay, memulai Jadiin saat menjadi mahasiswa Telkom University.
-            Kami percaya setiap ide layak diwujudkan menjadi solusi digital yang nyata dan bermanfaat.
-          </p>
-        </div>
+      <section className="">
+        <SpotlightTentangKamiDemo />
       </section>
 
       {/* Visi & Misi */}
