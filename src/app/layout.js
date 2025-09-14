@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import NavbarDemo from "@/components/navbar-menu-demo";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
         }} />
       </head>
       <body className={`${poppins.variable} font-[var(--font-poppins)] antialiased bg-white text-black dark:bg-black dark:text-white`}>
+        <NavbarDemo />
         {children}
       </body>
     </html>

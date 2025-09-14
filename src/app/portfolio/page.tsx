@@ -10,7 +10,6 @@ export const metadata = {
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen">
-      <NavbarDemo />
       <section className="">
         <SpotlightNewDemo />
       </section>

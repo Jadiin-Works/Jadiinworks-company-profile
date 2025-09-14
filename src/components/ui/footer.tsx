@@ -21,11 +21,11 @@ const products: FooterLink[] = [
   { label: "Automation Bot", href: "/portfolio/automation-bot" },
 ];
 
-export default function Footer() {
+export default function Footer({ bgColor = 'bg-white' }: { bgColor?: string }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-black text-neutral-700 dark:text-neutral-300">
+    <footer className={`w-full border-t border-neutral-200 dark:border-neutral-800 ${bgColor} text-neutral-700 dark:text-neutral-300`}>
       <div className="mx-auto max-w-7xl px-4 py-12">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2 space-y-3">
