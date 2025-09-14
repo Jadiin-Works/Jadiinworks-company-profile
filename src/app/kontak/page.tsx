@@ -4,6 +4,7 @@ import { Spotlight } from "@/components/ui/spotlight-new";
 import { IconBrandWhatsapp, IconMail, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 import ContactForm from "@/components/ui/contact-form";
 import Image from "next/image";
+import SpotlightKontakDemo from "@/components/spotlight-kontak-demo";
 
 export const metadata = {
   title: "Kontak | Jadiinworks",
@@ -13,18 +14,11 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen">
       <NavbarDemo />
-      <section className="min-h-[70vh] md:h-screen w-full rounded-md flex items-center justify-center bg-white dark:bg-black antialiased bg-grid-black/[0.02] dark:bg-grid-white/[0.02] relative overflow-hidden">
-        <Spotlight />
-        <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-28 md:pt-0 text-center">
-          <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-purple-600 via-purple-400 to-blue-400 dark:from-purple-400 dark:via-purple-300 dark:to-blue-300">
-            Hubungi <br /> Jadiin Works
-          </h1>
-          <p className="mt-4 font-normal text-base dark:text-neutral-300 max-w-lg text-center mx-auto">
-            Siap membantu kebutuhan desain, pengembangan web, dan branding Anda. Hubungi kami untuk konsultasi gratis!
-          </p>
-        </div>
-      </section>
 
+      <section className="">
+        <SpotlightKontakDemo />
+      </section>
+      
       <section className="py-20 px-4 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid gap-10 md:grid-cols-2">
