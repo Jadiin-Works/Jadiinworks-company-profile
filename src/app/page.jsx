@@ -4,10 +4,7 @@ import React, { useEffect, useState } from "react";
 import { AppleCardsCarouselDemo } from "./components/ui/aceternity/carousel/AppleCarousel";
 import { Scrollama, Step } from "react-scrollama";
 import { Browser } from "./components/device/Browser";
-import PosWeb from "public/assets/porto-web/pos1.png";
-import CyberArmy from "public/assets/porto-web/CyberArmy.png";
 import Footer from "@/components/ui/footer";
-import LogoJadiin from "public/assets/Logomark.png";
 import Image from "next/image";
 import Link from "next/link";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
@@ -44,7 +41,6 @@ const stepContents = [
     bg: "bg-secondary/20",
     titleColor: "text-secondary",
     descColor: "text-black",
-    image: PosWeb,
   },
   {
     title: "UI/UX Design",
@@ -52,7 +48,6 @@ const stepContents = [
     bg: "bg-blueGreen/20",
     titleColor: "text-secondary",
     descColor: "text-black",
-    image: CyberArmy
   },
   {
     title: "Support & Maintenance",
@@ -297,7 +292,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center justify-center h-screen text-center mb-20 px-6">
-        <Image src={LogoJadiin} alt="Jadiinworks Logo" width={100} height={100} className="mb-6" />
+        <Image src={'/assets/Logomark.png'} alt="Jadiinworks Logo" width={100} height={100} className="mb-6" />
         <h2 className="text-4xl font-bold mb-4 text-black dark:text-white">Let's Build Something Amazing Together</h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">Ready to elevate your digital presence? Contact us today to discuss your project and discover how we can help you achieve your goals.</p>
         <Link
