@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { IconBrandWhatsapp, IconBrandInstagram, IconMail } from "@tabler/icons-react";
+import Image from "next/image";
+import Logo from "@/../public/assets/Logomark.png";
 
 type FooterLink = {
   label: string;
@@ -30,8 +32,8 @@ export default function Footer({ bgColor = 'bg-white' }: { bgColor?: string }) {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2 space-y-3">
             <Link href="/" className="inline-flex items-center gap-2">
-              <img
-                src="/Assets/Logomark.png"
+              <Image
+                src={Logo}
                 alt="Jadiinworks Logomark"
                 className="inline-block w-6"
               />

@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 
 
@@ -100,7 +101,7 @@ export const ProductItem = ({
 }) => {
   return (
     <a href={href} className="flex items-center gap-3 p-3 rounded-xl bg-transparent hover:bg-white/10 dark:hover:bg-white/5 transition-colors">
-      <img
+      <Image
         src={src}
         width={140}
         height={70}

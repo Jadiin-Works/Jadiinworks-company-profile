@@ -4,6 +4,9 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar
 import { cn } from "@/lib/utils";
 import { IconMoon, IconSun, IconMenu2, IconX } from "@tabler/icons-react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "@/../public/assets/Logomark.png";
 
 export default function NavbarDemo() {
   return (
@@ -57,13 +60,13 @@ function Navbar({ className }: { className?: string }) {
     >
       <div className="mx-auto max-w-[92vw] sm:max-w-2xl px-2 sm:px-4">
         <Menu setActive={setActive}>
-          <a href="/" className="flex items-center gap-2">
-            <img
-              src="/Assets/Logomark.png"
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src={Logo}
               alt="Logo"
               className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
             />
-          </a>
+          </Link>
 
           {/* Mobile current page label */}
           {currentTitle && (
@@ -113,11 +116,11 @@ function Navbar({ className }: { className?: string }) {
         {isMobileOpen && (
           <div className="sm:hidden mt-2 rounded-2xl border border-white/15 dark:border-white/10 bg-white/10 dark:bg-black/20 backdrop-blur-xl shadow-2xl p-3">
             <nav className="flex flex-col gap-2 text-sm">
-              <a href="/" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Beranda</a>
-              <a href="/layanan" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/layanan") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Layanan</a>
-              <a href="/portfolio" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/portfolio") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Portfolio</a>
-              <a href="/tentangkami" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/tentangkami") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Tentang Kami</a>
-              <a href="/kontak" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/kontak") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Kontak</a>
+              <Link href="/" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Beranda</Link>
+              <Link href="/layanan" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/layanan") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Layanan</Link>
+              <Link href="/portfolio" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/portfolio") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Portfolio</Link>
+              <Link href="/tentangkami" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/tentangkami") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Tentang Kami</Link>
+              <Link href="/kontak" className={cn("px-3 py-2 rounded-lg hover:bg-white/10", isActive("/kontak") && "underline underline-offset-4 decoration-neutral-900 dark:decoration-white")}>Kontak</Link>
               <button
                 type="button"
                 onClick={toggleTheme}

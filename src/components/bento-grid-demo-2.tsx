@@ -10,6 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import Lottie from "lottie-react";
+import Image from "next/image";
 
 export default function BentoGridSecondDemo() {
   const router = useRouter();
@@ -37,7 +38,7 @@ export default function BentoGridSecondDemo() {
 
 const Skeleton = ({ src, alt }: { src: string; alt: string }) => (
   <div className="relative flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-900">
-    <img
+    <Image
       src={src}
       alt={alt}
       className="w-full h-full object-cover object-top"
