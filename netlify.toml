@@ -1,9 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "npm rebuild lightningcss && npm run build"
   publish = ".next"
 
-[functions]
-  node_bundler = "esbuild"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [build.environment]
   NEXT_DISABLE_TURBOPACK = "1"
+  

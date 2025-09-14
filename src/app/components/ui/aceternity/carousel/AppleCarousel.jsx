@@ -60,38 +60,38 @@ const data = [
     {
         category: "Website Development",
         title: "You can do more with AI.",
-        src: Sorgum.src,
+        src: Sorgum,
         content: <DummyContent />,
     },
     {
         category: "UI/UX Redesign",
         title: "Enhance your productivity.",
-        src: Damai.src,
+        src: Damai,
         content: <DummyContent />,
     },
     {
         category: "AI Development",
         title: "Launching the new Apple Vision Pro.",
-        src: Kolabcenter.src,
+        src: Kolabcenter,
         content: <DummyContent />,
     },
 
     {
         category: "IoT Development",
         title: "Maps for your iPhone 15 Pro Max.",
-        src: AbsensyWeb.src,
+        src: AbsensyWeb,
         content: <DummyContent />,
     },
     {
         category: "Mobile App Development",
         title: "Photography just got better.",
-        src: Kasirkita.src,
+        src: Kasirkita,
         content: <DummyContent />,
     },
     {
         category: "AI Agent Development",
         title: "Photography just got better.",
-        src: N8n.src,
+        src: N8n,
         content: <DummyContent />,
     }
 ];
