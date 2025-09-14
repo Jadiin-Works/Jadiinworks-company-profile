@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/hero-gallery-scroll-animation"
 
 const AUTOMATION_IMAGES = [
-  "/Assets/porto-automation/whatsapp-bot1.png",
-  "/Assets/porto-automation/instagram-bot1.png",
-  "/Assets/porto-automation/data-processing1.png",
-  "/Assets/porto-automation/whatsapp-bot2.png",
-  "/Assets/porto-automation/instagram-bot2.png",
+  "/assets/porto-automation/whatsapp-bot1.png",
+  "/assets/porto-automation/instagram-bot1.png",
+  "/assets/porto-automation/data-processing1.png",
+  "/assets/porto-automation/whatsapp-bot2.png",
+  "/assets/porto-automation/instagram-bot2.png",
 ]
 
 const AutomationGalleryDemo = () => {

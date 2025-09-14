@@ -84,7 +84,7 @@ export default function WobbleCardDemo() {
         {/* Right-aligned image - smaller and better positioned */}
         <div className="pointer-events-none absolute right-0 bottom-0 h-[80%] w-[50%] md:w-[45%] lg:w-[40%] hidden md:block">
           <Image
-            src="/Assets/person6.jpg"
+            src="/assets/person6.jpg"
             unoptimized
             width={1200}
             height={800}

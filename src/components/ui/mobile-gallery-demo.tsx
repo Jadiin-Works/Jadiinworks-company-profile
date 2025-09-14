@@ -7,11 +7,11 @@ import {
   ContainerScale,
   ContainerScroll,
 } from "@/components/ui/hero-gallery-scroll-animation"
-import absensy from "@/../public/assets/porto-mobile/absensy2.png";
-import solusikita1 from "@/../public/assets/porto-mobile/SolusiKita1.png";
-import laporkuy3 from "@/../public/assets/porto-mobile/laporkuy3.png";
-import solusikita2 from "@/../public/assets/porto-mobile/Solusikita2.png";
-import kolabcenter1 from "@/../public/assets/porto-mobile/kolabcenter1.png";
+import absensy from "public/assets/porto-mobile/absensy2.png";
+import solusikita1 from "public/assets/porto-mobile/SolusiKita1.png";
+import laporkuy3 from "public/assets/porto-mobile/laporkuy3.png";
+import solusikita2 from "public/assets/porto-mobile/Solusikita2.png";
+import kolabcenter1 from "public/assets/porto-mobile/kolabcenter1.png";
 
 const MOBILE_IMAGES = [
   absensy,

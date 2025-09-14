@@ -6,7 +6,7 @@ import { IconMoon, IconSun, IconMenu2, IconX } from "@tabler/icons-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/../public/assets/Logomark.png";
+import Logo from "public/assets/Logomark.png";
 
 export default function NavbarDemo() {
   return (

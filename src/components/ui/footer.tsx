@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { IconBrandWhatsapp, IconBrandInstagram, IconMail } from "@tabler/icons-react";
 import Image from "next/image";
-import Logo from "@/../public/assets/Logomark.png";
+import Logo from "public/assets/Logomark.png";
 
 type FooterLink = {
   label: string;
