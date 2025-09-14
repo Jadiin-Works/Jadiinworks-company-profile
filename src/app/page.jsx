@@ -5,23 +5,9 @@ import { AppleCardsCarouselDemo } from "./components/ui/aceternity/carousel/Appl
 import { Scrollama, Step } from "react-scrollama";
 import { Browser } from "./components/device/Browser";
 import PosWeb from "public/assets/porto-web/pos1.png";
-import CrypoWeb from "public/assets/porto-web/crypo-original.png";
-import AbsensyWeb from "public/assets/porto-web/absensy2.png";
 import CyberArmy from "public/assets/porto-web/CyberArmy.png";
-import Damai from "public/assets/porto-uiux/damai1.png";
-import Sonsaur from "public/assets/porto-uiux/sonsaur2.png";
-import ButWeb from "public/assets/porto-uiux/but1.png";
-import Laporkuy from "public/assets/porto-uiux/laporkuy1.png";
-import Kasirkita from "public/assets/porto-mobile/kasirkita1.png";
-import HamburgWeb from "public/assets/porto-web/Jadiin Portfolio (16).png";
-import Sentrakreasi from "public/assets/porto-web/Jadiin Portfolio (8).png";
-import Kolabcenter from "public/assets/porto-mobile/kolabcenter1.png";
-import Uplink from "public/assets/porto-uiux/uplink1.png";
-import Khb from "public/assets/porto-web/khb1.png";
 import Footer from "@/components/ui/footer";
 import LogoJadiin from "public/assets/Logomark.png";
-import Mice from "public/assets/porto-uiux/mice.jpeg";
-import Sorgum from "public/assets/porto-uiux/sorgum.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
@@ -29,21 +15,21 @@ import { TestimonialsColumn } from "@/components/testimonials-columns-1";
 import { motion } from "motion/react";
 
 const products = [
-  { title: "Moonbeam", link: "https://gomoonbeam.com", thumbnail: PosWeb },
-  { title: "Cursor", link: "https://cursor.so", thumbnail: CrypoWeb },
-  { title: "Rogue", link: "https://userogue.com", thumbnail: AbsensyWeb },
-  { title: "Editorially", link: "https://editorially.org", thumbnail: Damai },
-  { title: "Editrix AI", link: "https://editrix.ai", thumbnail: Sonsaur },
-  { title: "Pixel Perfect", link: "https://app.pixelperfect.quest", thumbnail: ButWeb },
-  { title: "Algochurn", link: "https://algochurn.com", thumbnail: Laporkuy },
-  { title: "Aceternity UI", link: "https://ui.aceternity.com", thumbnail: Kasirkita },
-  { title: "Tailwind Master Kit", link: "https://tailwindmasterkit.com", thumbnail: HamburgWeb },
-  { title: "SmartBridge", link: "https://smartbridgetech.com", thumbnail: Sentrakreasi },
-  { title: "Renderwork Studio", link: "https://renderwork.studio", thumbnail: Khb },
-  { title: "Creme Digital", link: "https://cremedigital.com", thumbnail: Kolabcenter },
-  { title: "Golden Bells Academy", link: "https://goldenbellsacademy.com", thumbnail: Uplink },
-  { title: "Invoker Labs", link: "https://invoker.lol", thumbnail: Mice },
-  { title: "E Free Invoice", link: "https://efreeinvoice.com", thumbnail: Sorgum },
+  { title: "Moonbeam", link: "https://gomoonbeam.com", thumbnail: '/assets/porto-web/pos1.png' },
+  { title: "Cursor", link: "https://cursor.so", thumbnail: '/assets/porto-web/crypo-original.png' },
+  { title: "Rogue", link: "https://userogue.com", thumbnail: '/assets/porto-web/absensy2.png' },
+  { title: "Editorially", link: "https://editorially.org", thumbnail: '/assets/porto-uiux/damai1.png' },
+  { title: "Editrix AI", link: "https://editrix.ai", thumbnail: '/assets/porto-uiux/sonsaur2.png' },
+  { title: "Pixel Perfect", link: "https://app.pixelperfect.quest", thumbnail: '/assets/porto-uiux/but1.png' },
+  { title: "Algochurn", link: "https://algochurn.com", thumbnail: '/assets/porto-uiux/laporkuy1.png' },
+  { title: "Aceternity UI", link: "https://ui.aceternity.com", thumbnail: '/assets/porto-mobile/kasirkita1.png' },
+  { title: "Tailwind Master Kit", link: "https://tailwindmasterkit.com", thumbnail: '/assets/porto-web/Jadiin Portfolio (16).png' },
+  { title: "SmartBridge", link: "https://smartbridgetech.com", thumbnail: '/assets/porto-web/Jadiin Portfolio (8).png' },
+  { title: "Renderwork Studio", link: "https://renderwork.studio", thumbnail: '/assets/porto-web/khb1.png' },
+  { title: "Creme Digital", link: "https://cremedigital.com", thumbnail: '/assets/porto-mobile/kolabcenter1.png' },
+  { title: "Golden Bells Academy", link: "https://goldenbellsacademy.com", thumbnail: '/assets/porto-uiux/uplink1.png' },
+  { title: "Invoker Labs", link: "https://invoker.lol", thumbnail: '/assets/porto-uiux/mice.jpeg' },
+  { title: "E Free Invoice", link: "https://efreeinvoice.com", thumbnail: '/assets/porto-uiux/sorgum.jpeg' },
 ];
 
 // STEP 2: Siapkan konten untuk setiap step dalam sebuah array

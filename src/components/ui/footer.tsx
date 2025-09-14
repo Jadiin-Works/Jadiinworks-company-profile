@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { IconBrandWhatsapp, IconBrandInstagram, IconMail } from "@tabler/icons-react";
 import Image from "next/image";
-import Logo from "public/assets/Logomark.png";
 
 type FooterLink = {
   label: string;
@@ -33,7 +32,9 @@ export default function Footer({ bgColor = 'bg-white' }: { bgColor?: string }) {
           <div className="md:col-span-2 space-y-3">
             <Link href="/" className="inline-flex items-center gap-2">
               <Image
-                src={Logo}
+                width={2000}
+                height={2000}
+                src={'/assets/Logomark.png'}
                 alt="Jadiinworks Logomark"
                 className="inline-block w-6"
               />

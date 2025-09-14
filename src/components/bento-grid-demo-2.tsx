@@ -41,6 +41,8 @@ const Skeleton = ({ src, alt }: { src: string; alt: string }) => (
     <Image
       src={src}
       alt={alt}
+      width={2000}
+      height={2000}
       className="w-full h-full object-cover object-top"
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

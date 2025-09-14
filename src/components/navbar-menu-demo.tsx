@@ -62,7 +62,9 @@ function Navbar({ className }: { className?: string }) {
         <Menu setActive={setActive}>
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src={Logo}
+              src={'/assets/Logomark.png'}
+              width={32}
+              height={32}
               alt="Logo"
               className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
             />

@@ -4,7 +4,6 @@ import Image from "next/image"
 import {
   BentoCell,
   BentoGrid,
-  ContainerScale,
   ContainerScroll,
 } from "@/components/ui/hero-gallery-scroll-animation"
 
@@ -23,6 +22,8 @@ const AutomationGalleryDemo = () => {
         {AUTOMATION_IMAGES.map((imageUrl, index) => (
           <BentoCell key={index} className="overflow-hidden rounded-xl shadow-xl">
             <Image
+              width={2000}
+              height={2000}
               className="size-full object-cover object-center"
               src={imageUrl}
               alt={`Automation bot showcase ${index + 1}`}

@@ -4,21 +4,15 @@ import Image from "next/image"
 import {
   BentoCell,
   BentoGrid,
-  ContainerScale,
   ContainerScroll,
 } from "@/components/ui/hero-gallery-scroll-animation"
-import absensy from "public/assets/porto-mobile/absensy2.png";
-import solusikita1 from "public/assets/porto-mobile/SolusiKita1.png";
-import laporkuy3 from "public/assets/porto-mobile/laporkuy3.png";
-import solusikita2 from "public/assets/porto-mobile/Solusikita2.png";
-import kolabcenter1 from "public/assets/porto-mobile/kolabcenter1.png";
 
 const MOBILE_IMAGES = [
-  absensy,
-  solusikita1,
-  laporkuy3,
-  solusikita2,
-  kolabcenter1,
+  "/assets/porto-mobile/absensy2.png",
+  "/assets/porto-mobile/solusikita1.png",
+  "/assets/porto-mobile/laporkuy3.png",
+  "/assets/porto-mobile/solusikita2.png",
+  "/assets/porto-mobile/kolabcenter1.png",
 ]
 
 const MobileGalleryDemo = () => {
@@ -28,6 +22,8 @@ const MobileGalleryDemo = () => {
         {MOBILE_IMAGES.map((imageUrl, index) => (
           <BentoCell key={index} className="overflow-hidden rounded-xl shadow-xl">
             <Image
+              width={2000}
+              height={2000}
               className="size-full object-cover object-center"
               src={imageUrl}
               alt={`Mobile app showcase ${index + 1}`}

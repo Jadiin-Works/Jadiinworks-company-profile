@@ -1,5 +1,4 @@
 import { LottieSkeleton } from "@/components/bento-grid-demo-2";
-import Image from "next/image";
 
 export function Browser({ src }) {
     return (

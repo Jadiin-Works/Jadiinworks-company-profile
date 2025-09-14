@@ -2,12 +2,6 @@
 
 import React from "react";
 import { Card, Carousel } from "./MobileCarousel";
-import Sorgum from "public/assets/porto-uiux/sorgum.jpeg";
-import AbsensyWeb from "public/assets/porto-web/absensy1.png";
-import Damai from "public/assets/porto-uiux/damai1.png";
-import Kolabcenter from "public/assets/porto-mobile/kolabcenter1.png";
-import Kasirkita from "public/assets/porto-mobile/kasirkita1.png";
-import N8n from "public/assets/porto-ai/n8n.jpg";
 
 export function AppleCardsCarouselDemo() {
     const cards = data.map((card, index) => (
@@ -60,38 +54,38 @@ const data = [
     {
         category: "Website Development",
         title: "You can do more with AI.",
-        src: Sorgum,
+        src: '/assets/porto-uiux/sorgum.jpeg',
         content: <DummyContent />,
     },
     {
         category: "UI/UX Redesign",
         title: "Enhance your productivity.",
-        src: Damai,
+        src: '/assets/porto-uiux/damai1.png',
         content: <DummyContent />,
     },
     {
         category: "AI Development",
         title: "Launching the new Apple Vision Pro.",
-        src: Kolabcenter,
+        src: '/assets/porto-mobile/kolabcenter1.png',
         content: <DummyContent />,
     },
 
     {
         category: "IoT Development",
         title: "Maps for your iPhone 15 Pro Max.",
-        src: AbsensyWeb,
+        src: '/assets/porto-web/absensy1.png',
         content: <DummyContent />,
     },
     {
         category: "Mobile App Development",
         title: "Photography just got better.",
-        src: Kasirkita,
+        src: '/assets/porto-mobile/kasirkita1.png',
         content: <DummyContent />,
     },
     {
         category: "AI Agent Development",
         title: "Photography just got better.",
-        src: N8n,
+        src: '/assets/porto-mobile/n8n.jpg',
         content: <DummyContent />,
     }
 ];

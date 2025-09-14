@@ -257,8 +257,8 @@ export const Card = ({
 };
 
 export const BlurImage = ({
-  height,
-  width,
+  height = 2000,
+  width = 2000,
   src,
   className,
   alt,
