@@ -3,9 +3,10 @@ import Footer from "@/components/ui/footer";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { IconBrandWhatsapp, IconMail, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 import ContactForm from "@/components/ui/contact-form";
+import Image from "next/image";
 
 export const metadata = {
-  title: "Portfolio | Jadiinworks",
+  title: "Kontak | Jadiinworks",
 };
 
 export default function PortfolioPage() {
@@ -16,10 +17,10 @@ export default function PortfolioPage() {
         <Spotlight />
         <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-28 md:pt-0 text-center">
           <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-purple-600 via-purple-400 to-blue-400 dark:from-purple-400 dark:via-purple-300 dark:to-blue-300">
-            Hubungi <br /> Jadiinworks
+            Hubungi <br /> Jadiin Works
           </h1>
           <p className="mt-4 font-normal text-base dark:text-neutral-300 max-w-lg text-center mx-auto">
-            Berbasis di Bojongsoang, Bandung. Melayani klien di seluruh Indonesia.
+            Siap membantu kebutuhan desain, pengembangan web, dan branding Anda. Hubungi kami untuk konsultasi gratis!
           </p>
         </div>
       </section>
@@ -28,8 +29,20 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid gap-10 md:grid-cols-2">
             <div className="rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 bg-white/50 dark:bg-black/50">
-              <h2 className="text-2xl font-semibold mb-6 text-neutral-900 dark:text-neutral-100">Informasi Kontak</h2>
-              <p className="text-neutral-600 dark:text-neutral-300 mb-9">Klik salah satu untuk menghubungi kami.</p>
+              <h2 className="text-2xl font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Informasi Kontak</h2>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-6">Klik salah satu untuk menghubungi kami.</p>
+              
+              {/* Contact Image */}
+              <div className="relative mb-6 rounded-xl overflow-hidden">
+                <Image
+                  src="/Assets/person4.jpg"
+                  alt="Kontak Jadiin Works"
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
               <div className="max-w-3xl rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-black/70 shadow-sm">
                 <ul className="divide-y divide-neutral-200 dark:divide-neutral-800">
                   <li>

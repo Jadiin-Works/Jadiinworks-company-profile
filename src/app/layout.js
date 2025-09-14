@@ -9,7 +9,12 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Jadiinworks",
-  description: "Using Poppins font with next/font and Tailwind",
+  description: "Digital solutions that matter - Web Development, Mobile Apps, UI/UX Design, Automation Bot",
+    icons: {
+      icon: '/Assets/Logomark.png',
+      shortcut: '/Assets/Logomark.png',
+      apple: '/Assets/Logomark.png',
+    },
 };
 
 export default function RootLayout({ children }) {
@@ -23,6 +28,16 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: initTheme }} />
+        <link rel="icon" href="/Assets/Logomark.png" type="image/png" />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            link[rel="icon"] {
+              object-fit: contain !important;
+              width: 32px !important;
+              height: 32px !important;
+            }
+          `
+        }} />
       </head>
       <body className={`${poppins.variable} font-[var(--font-poppins)] antialiased bg-white text-black dark:bg-black dark:text-white`}>
         {children}

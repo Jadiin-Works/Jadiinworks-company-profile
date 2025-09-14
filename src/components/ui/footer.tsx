@@ -82,13 +82,8 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-neutral-200 dark:border-neutral-800">
-        <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-neutral-500 dark:text-neutral-400">© {year} Jadiinworks. All rights reserved.</p>
-           <div className="flex items-center gap-4 text-xs">
-             <Link href="/privacy" className="hover:text-neutral-900 dark:hover:text-neutral-100">Kebijakan Privasi</Link>
-             <span className="h-3 w-px bg-neutral-300 dark:bg-neutral-700" />
-             <Link href="/terms" className="hover:text-neutral-900 dark:hover:text-neutral-100">Syarat & Ketentuan</Link>
-           </div>
+        <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col items-center justify-center">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center">© {year} Jadiinworks. All rights reserved.</p>
         </div>
       </div>
     </footer>

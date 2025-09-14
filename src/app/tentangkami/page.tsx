@@ -22,12 +22,11 @@ export default function AboutPage() {
       <section className="min-h-[70vh] md:h-screen w-full rounded-md flex items-center justify-center bg-white dark:bg-black antialiased bg-grid-black/[0.02] dark:bg-grid-white/[0.02] relative overflow-hidden">
         <Spotlight />
         <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-28 md:pt-0 text-center">
-          <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-600 via-purple-400 to-blue-400 dark:from-purple-400 dark:via-purple-300 dark:to-blue-300 leading-[1.15] pb-1 md:pb-2 inline-block">   
-            Tentang <br /> Jadiinworks
+          <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-600 via-purple-400 to-blue-400 dark:from-purple-400 dark:via-purple-300 dark:to-blue-300 leading-[1.15] pb-1 md:pb-2 inline-block">
+            Tentang <br /> Jadiin Works
           </h1>
           <p className="mt-4 text-base md:text-lg dark:text-neutral-300 max-w-2xl mx-auto">
-            Kami, Arbi dan Jay, memulai Jadiin saat menjadi mahasiswa Telkom University.
-            Kami percaya setiap ide layak diwujudkan menjadi solusi digital yang nyata dan bermanfaat.
+            Kami percaya setiap ide dapat diwujudkan menjadi produk teknologi yang memberikan nilai nyata bagi bisnis dan masyarakat.
           </p>
         </div>
       </section>
@@ -42,26 +41,27 @@ export default function AboutPage() {
             <ScrollReveal className="rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 md:p-8 bg-white/50 dark:bg-black/50">
               <h3 className="text-2xl font-semibold mb-3">Visi</h3>
               <p className="text-neutral-700 dark:text-neutral-300">
-                Menjadi mitra teknologi tepercaya yang membantu bisnis di Indonesia bertumbuh
-                melalui produk digital yang berdampak dan mudah digunakan.
+                Menjadi platform terdepan di Indonesia yang memberdayakan individu, UMKM, dan startup untuk memiliki kehadiran digital profesional dan berdampak, melalui solusi pembuatan website yang inovatif, solutif, mudah, dan terjangkau.
               </p>
             </ScrollReveal>
             <ScrollReveal className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800" delay={100}>
-              <Image src="/Assets/porto-web/sentra1.png" alt="Ilustrasi Visi" fill className="object-cover" />
+              <Image src="/Assets/person1.jpg" alt="Ilustrasi Visi" fill className="object-cover" />
             </ScrollReveal>
           </div>
 
           {/* Misi row (image swapped) */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
             <ScrollReveal className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 md:order-1 order-2" delay={100}>
-              <Image src="/Assets/porto-web/kwt1.png" alt="Ilustrasi Misi" fill className="object-cover" />
+              <Image src="/Assets/person3.jpg" alt="Ilustrasi Misi" fill className="object-cover" />
             </ScrollReveal>
             <ScrollReveal className="rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 md:p-8 bg-white/50 dark:bg-black/50 md:order-2 order-1">
               <h3 className="text-2xl font-semibold mb-3">Misi</h3>
               <ul className="space-y-2 text-neutral-700 dark:text-neutral-300">
-                <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-400" />Menghadirkan solusi web, mobile, dan otomasi yang efektif.</li>
-                <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-400" />Berorientasi pada pengalaman pengguna dan hasil bisnis klien.</li>
-                <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-400" />Kolaboratif, transparan, dan tepat waktu dalam setiap proyek.</li>
+                <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-400" />Menyediakan layanan pembuatan website yang cepat, efisien, dan berkualitas.</li>
+                <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-400" />Menciptakan desain responsif dengan pengalaman pengguna yang modern dan menarik.</li>
+                <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-400" />Memberikan dukungan purna jual serta edukasi agar klien mandiri dalam mengelola website.</li>
+                <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-400" />Berinovasi dengan teknologi terbaru sesuai kebutuhan dan tren pasar.</li>
+                <li className="flex items-start gap-2"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-400" />Membantu klien meningkatkan efisiensi bisnis melalui integrasi teknologi yang relevan.</li>
               </ul>
             </ScrollReveal>
           </div>
@@ -71,9 +71,9 @@ export default function AboutPage() {
       {/* Storytelling as card grid (sesuai referensi) */}
       <section className="py-16 px-4 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-neutral-900 dark:text-neutral-100">Perjalanan Kami</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-neutral-900 dark:text-neutral-100">Perjalanan Kami</h2>
           <ScrollReveal>
-          <WobbleCardDemo />
+            <WobbleCardDemo />
           </ScrollReveal>
         </div>
       </section>
