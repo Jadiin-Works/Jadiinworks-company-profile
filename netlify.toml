@@ -4,8 +4,4 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[build.environment]
-  NEXT_DISABLE_TURBOPACK = "1"
-  LIGHTNINGCSS_IGNORE_NATIVE= "true"
   
