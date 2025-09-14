@@ -293,7 +293,7 @@ export default function Home() {
         }} onStepProgress={({ progress }) => {
           setProgress2(progress);
           console.log(progress);
-        }} offset={0.5} debug>
+        }} offset={0.5}>
           <Step data={0} key={0}>
             <div
               style={{
