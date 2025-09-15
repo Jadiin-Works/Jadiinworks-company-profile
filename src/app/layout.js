@@ -1,7 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import NavbarDemo from "@/components/navbar-menu-demo";
-import Script from "next/script";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -30,19 +29,6 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: initTheme }} />
-        {/* Google Analytics script */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FMBSHQVWRN"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-FMBSHQVWRN');
-        `}
-        </Script>
         <link rel="icon" href="/Assets/Logomark.png" type="image/png" />
         <style dangerouslySetInnerHTML={{
           __html: `
