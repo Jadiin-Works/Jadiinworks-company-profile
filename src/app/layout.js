@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import NavbarDemo from "@/components/navbar-menu-demo";
+import Script from "next/script";
 
 const poppins = Poppins({
   variable: "--font-poppins",
